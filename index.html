@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAX 2026 - Das Weltfriedensfestival</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-hero {
+            background: linear-gradient(180deg, #2E3192 0%, #7B2B85 50%, #FDB813 100%);
+        }
+        
+        .gradient-banner {
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%);
+        }
+        
+        .gradient-community {
+            background: linear-gradient(180deg, rgba(109, 40, 217, 0.7) 0%, rgba(109, 40, 217, 0.9) 100%);
+        }
+        
+        .sticky-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Top Banner -->
+        <div class="bg-gradient-to-r from-orange-400 to-yellow-400 text-white text-center py-3 px-4">
+            <p class="text-sm font-semibold">✨ Melde dich jetzt in unserem Newsletter an, um den Vorverkauf nicht zu verpassen! ✨</p>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="relative min-h-screen gradient-hero text-white overflow-hidden">
+            <!-- Logo -->
+            <div class="absolute top-6 left-6 z-10">
+                <div class="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold">PAX</div>
+                        <div class="text-xs leading-tight">Friedens<br/>Festival</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="absolute top-6 right-6 flex gap-4 z-10">
+                <a href="#" class="text-white hover:text-yellow-300 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="#" class="text-white hover:text-yellow-300 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.038-1.358 5.359-.168.558-.5.744-.821.762-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.324-.437.892-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.121.099.155.232.171.326.016.095.037.312.021.482z"/></svg>
+                </a>
+            </div>
+
+            <div class="container mx-auto px-6 pt-32 pb-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Date & Location -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <span class="text-xl font-semibold">23. – 26. Juli 2026</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-8">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-lg">Freilichtbühne Friesack bei Berlin</span>
+                        </div>
+                        <div class="text-sm mb-2">Campwoche 21. – 28. Juli</div>
+
+                        <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                            Die Friedens­taube landet wieder
+                        </h1>
+
+                        <p class="text-xl mb-4">
+                            Wir laden dich von Herzen zum PAX – das Weltfriedensfestival ein: freue dich jetzt schon auf 8 Tage Gemeinschaft in Friesack.
+                        </p>
+
+                        <p class="text-lg opacity-90">
+                            Nach 7 Jahren erstrahlt das PAX in neuem Gewand, mit friedensbewegten Musikern, Vorträgen, Workshops aus aller Welt.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=800&fit=crop" 
+                            alt="Festival Joy" 
+                            class="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="mt-16 max-w-2xl mx-auto text-center">
+                    <h3 class="text-3xl font-bold mb-4">Bist du dabei?</h3>
+                    <p class="text-lg mb-6">
+                        Markiere dir das Datum und melde dich jetzt in unserem Newsletter an, um den Ticket-Vorverkauf nicht zu verpassen:
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input
+                            type="text"
+                            v-model="formData.name"
+                            placeholder="Dein Name"
+                            class="flex-1 px-6 py-4 rounded-lg text-gray-800 text-lg"
+                        />
+                        <input
+                            type="email"
+                            v-model="formData.email"
+                            placeholder="Deine Mailadresse"
+                            class="flex-1 px-6 py-4 rounded-lg text-gray-800 text-lg"
+                        />
+                        <button 
+                            @click="handleSubmit"
+                            class="bg-purple-900 hover:bg-purple-800 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg"
+                        >
+                            Ich bin dabei!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="relative h-96 overflow-hidden">
+            <img 
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=400&fit=crop" 
+                alt="Festival Crowd" 
+                class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 gradient-banner flex items-center justify-center">
+                <h2 class="text-white text-3xl md:text-5xl font-bold text-center px-6 leading-tight">
+                    Lasst uns gemeinsam dafür sorgen, dass der<br class="hidden md:block"/>erste Weltfrieden in Kürze ausbricht!
+                </h2>
+            </div>
+        </div>
+
+        <!-- Section 1: Ein Ort für die PAX Familie -->
+        <div class="bg-orange-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=700&fit=crop" 
+                            alt="Bubble Joy" 
+                            class="rounded-3xl shadow-xl w-full h-[500px] object-cover"
+                        />
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-bold text-purple-900 mb-6">
+                            Ein Ort für die<br/>PAX Familie
+                        </h2>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Das PAX wird auch dieses Jahr wieder auf der wunderschönen Freilichtbühne in Friesack/ Mark Brandenburg stattfinden können. Die Adresse lautet Vietnitzer Straße 14 in 14662 Friesack.
+                        </p>
+                        <p class="text-gray-700 text-lg">
+                            Wir schaffen einen Raum, in dem alle so sein dürfen, wie sie sind. In dem sie toleriert und akzeptiert werden, in all ihren Unterschiedlichkeiten und Eigenarten.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Acht Tage MITEINANDER SEIN -->
+        <div class="bg-orange-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-5xl font-bold text-purple-900 mb-6 leading-tight">
+                            Acht Tage<br/>MITEINANDER<br/>SEIN
+                        </h2>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Vom 23. bis 26. Juli 2026 könnt ihr unser vierbündiges Programm genießen, könnt aber auch schon früher kommen und bietet länger die Campwoche läuft ganze 8 Tage lang vom 21. bis 28. Juli!
+                        </p>
+                        <p class="text-gray-700 text-lg">
+                            Feiern, tanzen, Vorträge hören, sich austauschen, sich in Workshops ausprobieren, am Lagerfeuer singen, neue Freunde gewinnen, sich vernetzen...
+                        </p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img 
+                            src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=700&fit=crop" 
+                            alt="Together" 
+                            class="rounded-3xl shadow-xl w-full h-[500px] object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Für eine mitfühlendere Welt -->
+        <div class="bg-orange-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=700&fit=crop" 
+                            alt="Crowd Celebration" 
+                            class="rounded-3xl shadow-xl w-full h-[500px] object-cover"
+                        />
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-bold text-purple-900 mb-6 leading-tight">
+                            Für eine<br/>mitfühlendere,<br/>liebevollere und<br/>achtsamere Welt
+                        </h2>
+                        <p class="text-gray-700 text-lg">
+                            Wir nutzen unsere Vorstellungskraft, um eine Vision für ein menschliches Miteinander zu entwickeln, die das Potenzial hat, Menschen zu versöhnen und zusammenzuführen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab System - Program Preview -->
+        <div class="bg-gradient-to-b from-orange-50 to-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-purple-900 mb-12">
+                    Unser Programm
+                </h2>
+                
+                <!-- Desktop Tabs -->
+                <div class="hidden md:block">
+                    <div class="flex justify-center gap-4 mb-8 flex-wrap">
+                        <button
+                            v-for="(tab, key) in tabs"
+                            :key="key"
+                            @click="activeTab = key"
+                            :class="[
+                                'flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-lg transition',
+                                activeTab === key
+                                    ? 'bg-purple-900 text-white shadow-lg'
+                                    : 'bg-white text-purple-900 hover:bg-purple-100'
+                            ]"
+                        >
+                            <span v-html="tab.iconSvg"></span>
+                            {{ tab.title }}
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-12 max-w-4xl mx-auto">
+                        <h3 class="text-3xl font-bold text-purple-900 mb-4 flex items-center gap-3">
+                            <span v-html="tabs[activeTab].iconSvg"></span>
+                            {{ tabs[activeTab].title }}
+                        </h3>
+                        <p class="text-gray-700 text-xl leading-relaxed">
+                            {{ tabs[activeTab].content }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mobile Accordion -->
+                <div class="md:hidden space-y-4">
+                    <div v-for="(tab, key) in tabs" :key="key" class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <button
+                            @click="activeTab = activeTab === key ? '' : key"
+                            class="w-full flex items-center justify-between p-6 text-left"
+                        >
+                            <div class="flex items-center gap-3">
+                                <div class="text-purple-900" v-html="tab.iconSvg"></div>
+                                <span class="font-bold text-lg text-purple-900">{{ tab.title }}</span>
+                            </div>
+                            <span class="text-2xl text-purple-900">{{ activeTab === key ? '−' : '+' }}</span>
+                        </button>
+                        <div v-if="activeTab === key" class="px-6 pb-6">
+                            <p class="text-gray-700 leading-relaxed">{{ tab.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Section -->
+        <div class="relative h-[600px] overflow-hidden">
+            <img 
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&h=600&fit=crop" 
+                alt="Community" 
+                class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 gradient-community flex flex-col items-center justify-center text-white px-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-8 leading-tight">
+                    Werde jetzt Teil der Pax Familie und<br class="hidden md:block"/>verpasse keine Neuigkeiten mehr:
+                </h2>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="flex items-center gap-3 bg-purple-800 hover:bg-purple-700 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.038-1.358 5.359-.168.558-.5.744-.821.762-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.324-.437.892-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.121.099.155.232.171.326.016.095.037.312.021.482z"/></svg>
+                        Telegram Kanal abonnieren
+                    </button>
+                    <button class="flex items-center gap-3 bg-purple-800 hover:bg-purple-700 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram Kanal abonnieren
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-purple-950 text-white py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div>
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-4">
+                            <div class="text-center">
+                                <div class="text-xl font-bold">PAX</div>
+                                <div class="text-xs leading-tight">Friedens<br/>Festival</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xl font-semibold text-yellow-400 mb-2">PAX – Das Weltfriedensfestival</p>
+                        <p class="text-sm opacity-80">23. – 26. Juli 2026 • Friesack bei Berlin</p>
+                    </div>
+                    <div class="text-right">
+                        <nav class="space-y-2">
+                            <a href="#" class="block hover:text-yellow-400 transition">Home</a>
+                            <a href="#" class="block hover:text-yellow-400 transition">Impressum</a>
+                            <a href="#" class="block hover:text-yellow-400 transition">Datenschutz</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="text-center mt-8 pt-8 border-t border-purple-800 text-sm opacity-70">
+                    © 2026 PAX Festival. Alle Rechte vorbehalten.
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sticky Ticket Button -->
+        <button class="fixed bottom-8 right-8 bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-6 py-4 rounded-full font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition z-50 sticky-button">
+            🎟️ Tickets
+        </button>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    activeTab: 'musiker',
+                    formData: {
+                        name: '',
+                        email: ''
+                    },
+                    tabs: {
+                        musiker: {
+                            iconSvg: '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>',
+                            title: 'Musiker',
+                            content: 'Friedensbewegte Musiker aus aller Welt bringen euch zum Tanzen und Träumen. Von elektronischen Klängen bis zu akustischen Sessions – hier ist für jeden Geschmack etwas dabei.'
+                        },
+                        workshops: {
+                            iconSvg: '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>',
+                            title: 'Workshops',
+                            content: 'Entdecke dich selbst in unseren vielfältigen Workshops:
