@@ -1,5 +1,6 @@
 # PAX Festival - Lokaler Entwicklungsserver
 # Startet einen Python HTTP-Server für lokale Entwicklung
+# AUSFÜHRUNG: .\start-dev-server.ps1 (NICHT mit 'python' starten!)
 
 Write-Host "==================================" -ForegroundColor Cyan
 Write-Host "  PAX Festival - Dev Server" -ForegroundColor Yellow

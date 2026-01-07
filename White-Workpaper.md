@@ -30,6 +30,25 @@
   - data/aussteller.json (mit Kategorie, Angebot, Standnummer)
   - data/README.md (Umfassende Wartungsanleitung auf Deutsch)
 - [x] **Programm-Section Design** - Purple Gradient-Hintergrund für visuelle Abhebung
+- [x] **Tag-Filter System** - Filterung des Programms nach Festivaltagen
+  - Filter-Buttons: Alle Tage / Do 23. / Fr 24. / Sa 25. / So 26. Juli
+  - Orange Farbschema passend zum PAX-Design
+  - Intelligente Filterung für Musiker, Workshops, Vorträge
+  - Funktioniert mit Vue.js Computed Properties
+- [x] **Bewerbungs-System** - Vollständig implementiert
+  - 4 Bewerbungs-Banner in allen Programm-Tabs (Musiker, Workshops, Vorträge, Aussteller)
+  - PDF-Download-Buttons für Bewerbungsformulare
+  - E-Mail-Links zu bewerbung@pax...
+  - Kategorie-spezifische Farbgestaltung (Purple, Orange, Blue, Green)
+- [x] **Bewerbungs-Dokumentation**
+  - BEWERBUNG-FORMULAR-ANFORDERUNGEN.md (umfassende Feld-Spezifikationen)
+  - bewerbung/README.md (Workflow & PDF-Erstellungs-Anleitung)
+  - Detaillierte Anforderungen für alle 4 Kategorien
+- [x] **Entwickler-Setup**
+  - start-dev-server.ps1 (Python HTTP-Server für lokale Entwicklung)
+  - README.md mit Entwicklungs-Anleitung
+  - Lösung für CORS-Problem bei lokaler Entwicklung
+- [x] **Fallback-Bilder** - Inline SVG statt externe Platzhalter-URLs
 
 ### 🔨 In Arbeit / Noch zu erledigen
 
@@ -134,9 +153,11 @@
 3. **Vision & Mission:** ✅ *Implementiert*
    - "Ein Ort für die PAX Familie" und "Für eine mitfühlendere Welt".
 
-4. **Das Programm-Modul (Neu):** ⏳ *Ausstehend*
-   - Hier wird das von dir gewünschte Tab-System integriert (Musiker, Workshops, Vorträge, Aussteller).
-   - Grafisch im hellen Beigeton der mittleren Sektion gehalten.
+4. **Das Programm-Modul:** ✅ *Vollständig implementiert*
+   - Tab-System mit 4 Kategorien (Musiker, Workshops, Vorträge, Aussteller)
+   - Tag-Filter für alle Festivaltage (Do/Fr/Sa/So)
+   - Purple Gradient-Hintergrund zur visuellen Abhebung
+   - Bewerbungs-Banner mit PDF-Download in jedem Tab
 
 5. **Community & Mitmachen:** ✅ *Implementiert*
    - Bereich für Volunteers und Helfer.
@@ -157,7 +178,7 @@
 
 ## 3. Technische Features
 
-- **Tab-Navigation:** ⏳ *Ausstehend* - Ein sauberes JavaScript- oder CSS-Tab-Modul, das auf Mobilgeräten zu einem Accordion (untereinander klappbar) wird, um die Lesbarkeit zu garantieren.
+- **Tab-Navigation:** ✅ *Vollständig implementiert* - Vue.js 3 Tab-System mit Lazy Loading, Tag-Filter und Bewerbungs-Integration. Responsive Grid-Layout (2 Spalten mobile, 4 Spalten desktop).
 - **Sticky Booking Button:** ✅ *Implementiert* - Ein kleiner, mitschwebender Button "Tickets", der direkt zur Krasser Guru Seite führt.
 - **Anfahrt-Integration:** ⏳ *Ausstehend* - Kurzer Textblock zur Vietnitzer Straße 14 in 14662 Friesack.
 
@@ -258,6 +279,10 @@ PAX26, Weltfriedensfestival, Festival, Friesack, Berlin, Musik, Workshops, Peace
 - ✅ **data/vortraege.json** - Vortrags-Daten mit Beispieleinträgen
 - ✅ **data/aussteller.json** - Aussteller-Daten mit Beispieleinträgen
 - ✅ **data/README.md** - Umfassende JSON-Wartungsanleitung (200+ Zeilen)
+- ✅ **bewerbung/README.md** - Workflow & Anleitung für PDF-Bewerbungsformulare
+- ✅ **BEWERBUNG-FORMULAR-ANFORDERUNGEN.md** - Detaillierte Feld-Spezifikationen für alle Kategorien
+- ✅ **start-dev-server.ps1** - Python HTTP-Server für lokale Entwicklung
+- ✅ **README.md** - Entwickler-Dokumentation mit Setup-Anleitung
 
 ---
 
@@ -316,8 +341,36 @@ Tab-System unterhalb der Story-Sektionen:
   - vortraege.json: Redner, Organisation, Termin, Themen
   - aussteller.json: Kategorie, Angebot, Standnummer, Öffnungszeiten
 - **Wartung:** data/README.md enthält vollständige Anleitung für JSON-Pflege (auch für Nicht-Programmierer)
+- **Tag-Filter:** Orange Filter-Buttons für Tagesauswahl (Alle Tage / Do / Fr / Sa / So)
+  - Intelligente Filterung basierend auf Terminen/Auftritten
+  - Default: Alle Einträge sichtbar
+  - Chronologische Anzeige wenn gefiltert
+- **Bewerbungs-Integration:** Auffällige Banner in jedem Tab
+  - PDF-Download-Button für kategorie-spezifisches Formular
+  - Direkt-Link zu bewerbung@pax...
+  - Gradient-Design passend zur Kategorie (Purple/Orange/Blue/Green)
 
-## 4. Community & Social Media (Footer-Vorbereitung)
+## 5. Bewerbungssystem für Programm-Teilnahme
+
+### Status: ✅ Vollständig implementiert
+
+- **Bewerbungs-Banner:** In allen 4 Programm-Tabs prominent platziert
+  - 🎵 Musiker (Purple Gradient)
+  - 🎨 Workshops (Orange/Yellow Gradient)
+  - 🎤 Vorträge (Blue/Indigo Gradient)
+  - 🛍️ Aussteller (Green/Teal Gradient)
+- **Workflow:** PDF herunterladen → Ausfüllen → Unterschreiben → Mit Foto per E-Mail senden → PAX Orga prüft → Bei Zusage: Daten ins JSON
+- **Dokumentation:**
+  - BEWERBUNG-FORMULAR-ANFORDERUNGEN.md: Alle Pflichtfelder & Optionale Felder für jede Kategorie
+  - bewerbung/README.md: Workflow-Beschreibung & PDF-Erstellungs-Anleitung
+- **E-Mail:** bewerbung@pax... (mit kategorie-spezifischem Betreff)
+- **TODO:** 4 PDF-Formulare erstellen und in bewerbung/ ablegen:
+  - PAX-Bewerbung-Musiker.pdf
+  - PAX-Bewerbung-Workshop.pdf
+  - PAX-Bewerbung-Vortrag.pdf
+  - PAX-Bewerbung-Aussteller.pdf
+
+## 6. Community & Social Media (Footer-Vorbereitung)
 
 ### Status: ✅ Implementiert (Social Media Links noch Platzhalter)
 
@@ -326,7 +379,35 @@ Tab-System unterhalb der Story-Sektionen:
 - **Buttons:** "Telegram Kanal abonnieren" und "Instagram Kanal abonnieren" (Dunkelviolett mit Icons).
 - ⚠️ **TODO:** Echte Social Media URLs einfügen
 
-## 5. Rechtlicher Bereich (Dunkelvioletter Footer)
+## 5. Bewerbungssystem für Programm-Teilnahme
+
+### Status: ✅ Vollständig implementiert
+
+- **Bewerbungs-Banner:** In allen 4 Programm-Tabs prominent platziert
+  - 🎵 Musiker (Purple Gradient)
+  - 🎨 Workshops (Orange/Yellow Gradient)
+  - 🎤 Vorträge (Blue/Indigo Gradient)
+  - 🛍️ Aussteller (Green/Teal Gradient)
+- **Workflow:** PDF herunterladen → Ausfüllen → Unterschreiben → Mit Foto per E-Mail senden → PAX Orga prüft → Bei Zusage: Daten ins JSON
+- **Dokumentation:**
+  - BEWERBUNG-FORMULAR-ANFORDERUNGEN.md: Alle Pflichtfelder & Optionale Felder für jede Kategorie
+  - bewerbung/README.md: Workflow-Beschreibung & PDF-Erstellungs-Anleitung
+- **E-Mail:** bewerbung@pax... (mit kategorie-spezifischem Betreff)
+- **TODO:** 4 PDF-Formulare erstellen und in bewerbung/ ablegen:
+  - PAX-Bewerbung-Musiker.pdf
+  - PAX-Bewerbung-Workshop.pdf
+  - PAX-Bewerbung-Vortrag.pdf
+  - PAX-Bewerbung-Aussteller.pdf
+
+## 6. Rechtlicher Bereich (Dunkelvioletter Footer)
+
+### Status: ✅ Implementiert (Platzhalter-Daten zu füllen)
+
+- **Inhalt:** PAX Logo (weiß), Navigationslinks (Home, Impressum, Datenschutz, Ticket-Rückgabe, Presse), sowie Text "PAX – Das Weltfriedensfestival".
+- **Ergänzung für 2026:** Links für Datenschutz und die neuen Festivalregeln sind vorhanden.
+- ⚠️ **TODO:** Alle gelb markierten Platzhalter in den rechtlichen Seiten mit echten Daten füllen
+
+## 7. Rechtlicher Bereich (Dunkelvioletter Footer)
 
 ### Status: ✅ Implementiert (Platzhalter-Daten zu füllen)
 
@@ -336,14 +417,35 @@ Tab-System unterhalb der Story-Sektionen:
 
 ---
 
+## 8. Entwickler-Setup & Workflow
+
+### Status: ✅ Vollständig implementiert
+
+- **Lokaler Dev-Server:** start-dev-server.ps1 (PowerShell-Script)
+  - Startet Python HTTP-Server auf Port 8000
+  - Löst CORS-Problem bei lokaler Entwicklung
+  - Automatische Python-Version-Prüfung
+- **Entwickler-Dokumentation:** README.md im Root
+  - Setup-Anleitung für lokale Entwicklung
+  - Hinweise zu JSON-Pflege
+  - Deployment-Infos (GitHub Pages, Netlify, etc.)
+- **JSON-Daten-Workflow:**
+  1. JSON-Dateien im data/ Ordner bearbeiten
+  2. Über Python-Server testen (http://localhost:8000)
+  3. Auf Production-Server: Funktioniert ohne Server-Setup
+- **Fallback-System:** Inline SVG für fehlende Bilder (keine externen Abhängigkeiten)
+
+---
+
 ## Nächste Schritte (Priorisiert)
 
 ### 🔴 Kritisch (vor Go-Live)
-1. **SSL/HTTPS aktivieren** - Sicherheit und SEO
-2. **Platzhalter füllen** - Alle rechtlichen Seiten mit echten Daten
-3. **Cookie-Banner** - DSGVO-Compliance
-4. **robots.txt & sitemap.xml** - SEO-Grundlagen
-5. **Favicon** - Professioneller Auftritt
+1. **PDF-Bewerbungsformulare erstellen** - 4 Formulare für bewerbung/ Ordner (Spezifikationen in BEWERBUNG-FORMULAR-ANFORDERUNGEN.md)
+2. **SSL/HTTPS aktivieren** - Sicherheit und SEO
+3. **Platzhalter füllen** - Alle rechtlichen Seiten mit echten Daten
+4. **Cookie-Banner** - DSGVO-Compliance
+5. **robots.txt & sitemap.xml** - SEO-Grundlagen
+6. **Favicon** - Professioneller Auftritt
 
 ### 🟠 Hoch (zeitnah)
 1. **Schema.org Event-Markup** - SEO für Festival-Events
