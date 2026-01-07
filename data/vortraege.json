@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "titel": "Die Kraft der Gemeinschaft",
+    "redner": "Prof. Dr. Maria Hoffnung",
+    "organisation": "Institut für Friedensforschung",
+    "beschreibung": "Ein inspirierender Vortrag über die Bedeutung von Gemeinschaft in Zeiten globaler Herausforderungen und wie wir gemeinsam eine friedvollere Welt gestalten können.",
+    "dauer": "60 Minuten",
+    "bild": "src/assets/images/vortraege/gemeinschaft.jpg",
+    "termin": {
+      "tag": "Freitag, 24. Juli",
+      "uhrzeit": "16:00 - 17:00 Uhr",
+      "ort": "Vortragszelt"
+    },
+    "themen": [
+      "Gemeinschaftsbildung",
+      "Soziale Transformation",
+      "Friedensarbeit"
+    ]
+  },
+  {
+    "id": 2,
+    "titel": "Permakultur als Lebensphilosophie",
+    "redner": "Hans Grünwald",
+    "organisation": "Permakultur Akademie",
+    "beschreibung": "Entdecken Sie, wie Permakultur nicht nur eine Methode des Gärtnerns ist, sondern eine ganzheitliche Lebensphilosophie, die uns mit der Natur verbindet.",
+    "dauer": "75 Minuten",
+    "bild": "src/assets/images/vortraege/permakultur.jpg",
+    "termin": {
+      "tag": "Samstag, 25. Juli",
+      "uhrzeit": "11:00 - 12:15 Uhr",
+      "ort": "Vortragszelt"
+    },
+    "themen": [
+      "Nachhaltigkeit",
+      "Permakultur",
+      "Selbstversorgung"
+    ]
+  }
+]

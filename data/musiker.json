@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Die Beispielband",
+    "genre": "Weltmusik / Folk",
+    "land": "Deutschland",
+    "beschreibung": "Die Beispielband verbindet traditionelle Klänge mit modernen Rhythmen und schafft eine einzigartige musikalische Reise für Herz und Seele.",
+    "bild": "src/assets/images/musiker/beispielband.jpg",
+    "website": "https://beispielband.de",
+    "social": {
+      "instagram": "https://instagram.com/beispielband",
+      "facebook": "https://facebook.com/beispielband"
+    },
+    "auftritte": [
+      {
+        "tag": "Freitag, 24. Juli",
+        "uhrzeit": "20:00 Uhr",
+        "buehne": "Hauptbühne"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Friedensklang Ensemble",
+    "genre": "Klassik / World Fusion",
+    "land": "International",
+    "beschreibung": "Ein internationales Ensemble, das klassische Musik mit Weltmusik verbindet und eine Brücke zwischen Kulturen schlägt.",
+    "bild": "src/assets/images/musiker/friedensklang.jpg",
+    "website": "https://friedensklang.org",
+    "social": {
+      "youtube": "https://youtube.com/@friedensklang"
+    },
+    "auftritte": [
+      {
+        "tag": "Samstag, 25. Juli",
+        "uhrzeit": "18:00 Uhr",
+        "buehne": "Hauptbühne"
+      }
+    ]
+  }
+]

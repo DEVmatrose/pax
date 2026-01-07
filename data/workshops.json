@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "titel": "Yoga für Anfänger",
+    "leiter": "Sarah Meditation",
+    "kategorie": "Bewegung & Körper",
+    "beschreibung": "Ein sanfter Einstieg in die Welt des Yoga. Wir lernen grundlegende Asanas und Atemtechniken für mehr Entspannung im Alltag.",
+    "dauer": "90 Minuten",
+    "teilnehmer_max": 25,
+    "bild": "src/assets/images/workshops/yoga.jpg",
+    "termine": [
+      {
+        "tag": "Donnerstag, 23. Juli",
+        "uhrzeit": "10:00 - 11:30 Uhr",
+        "ort": "Yoga-Zelt"
+      },
+      {
+        "tag": "Samstag, 25. Juli",
+        "uhrzeit": "08:00 - 09:30 Uhr",
+        "ort": "Yoga-Zelt"
+      }
+    ],
+    "voraussetzungen": "Keine",
+    "mitzubringen": "Yogamatte, bequeme Kleidung"
+  },
+  {
+    "id": 2,
+    "titel": "Gewaltfreie Kommunikation",
+    "leiter": "Dr. Thomas Frieden",
+    "kategorie": "Kommunikation & Persönlichkeit",
+    "beschreibung": "Lernen Sie die Grundlagen der Gewaltfreien Kommunikation nach Marshall Rosenberg und wie Sie diese im Alltag anwenden können.",
+    "dauer": "120 Minuten",
+    "teilnehmer_max": 30,
+    "bild": "src/assets/images/workshops/kommunikation.jpg",
+    "termine": [
+      {
+        "tag": "Freitag, 24. Juli",
+        "uhrzeit": "14:00 - 16:00 Uhr",
+        "ort": "Workshop-Zelt 1"
+      }
+    ],
+    "voraussetzungen": "Offenheit für Selbstreflexion",
+    "mitzubringen": "Notizblock und Stift"
+  }
+]

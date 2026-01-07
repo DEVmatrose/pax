@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Bio-Kaffee Ronja",
+    "kategorie": "Food & Drinks",
+    "beschreibung": "Frisch gebrühter Bio-Kaffee aus fairem Handel, köstliche Kuchen und vegane Leckereien für zwischendurch.",
+    "angebot": [
+      "Fair Trade Kaffee",
+      "Bio-Tee",
+      "Vegane Kuchen",
+      "Glutenfreie Optionen"
+    ],
+    "bild": "src/assets/images/aussteller/biokaffee.jpg",
+    "standnummer": "F-12",
+    "website": "https://biokaffee-ronja.de",
+    "oeffnungszeiten": "Durchgehend 10:00 - 22:00 Uhr"
+  },
+  {
+    "id": 2,
+    "name": "Friedenskunst Atelier",
+    "kategorie": "Kunsthandwerk",
+    "beschreibung": "Handgefertigte Friedenssymbole, Mandalas und spirituelle Kunst aus recycelten Materialien.",
+    "angebot": [
+      "Handgemachter Schmuck",
+      "Mandalas",
+      "Friedenssymbole",
+      "Upcycling-Kunst"
+    ],
+    "bild": "src/assets/images/aussteller/friedenskunst.jpg",
+    "standnummer": "K-08",
+    "website": "https://friedenskunst-atelier.de",
+    "oeffnungszeiten": "11:00 - 20:00 Uhr"
+  },
+  {
+    "id": 3,
+    "name": "Naturkosmetik Lebensfreude",
+    "kategorie": "Kosmetik & Wellness",
+    "beschreibung": "100% natürliche Kosmetik ohne Tierversuche, handgerührt mit Liebe und Kräutern aus eigenem Anbau.",
+    "angebot": [
+      "Naturkosmetik",
+      "Seifen",
+      "Cremes",
+      "Ätherische Öle"
+    ],
+    "bild": "src/assets/images/aussteller/naturkosmetik.jpg",
+    "standnummer": "W-15",
+    "website": "https://lebensfreude-kosmetik.de",
+    "oeffnungszeiten": "10:00 - 19:00 Uhr"
+  }
+]

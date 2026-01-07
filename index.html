@@ -68,6 +68,15 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -261,6 +270,269 @@
             </div>
         </div>
 
+        <!-- Programm Section mit Tabs -->
+        <div class="bg-gradient-to-b from-purple-50 via-purple-100 to-purple-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bold text-purple-900 mb-4">Unser Programm</h2>
+                    <p class="text-purple-800 text-lg max-w-3xl mx-auto">
+                        Entdecke die Vielfalt des PAX Festivals: Von mitreißender Musik über inspirierende Vorträge bis hin zu spannenden Workshops und Ausstellern.
+                    </p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-0 mb-12 bg-white rounded-2xl overflow-hidden shadow-xl">
+                    <button 
+                        v-for="tab in tabs" 
+                        :key="tab.id"
+                        @click="setActiveTab(tab.id)"
+                        :class="activeTab === tab.id ? 'bg-purple-900 text-white' : 'bg-white text-purple-900 hover:bg-purple-50'"
+                        class="px-6 py-8 font-bold text-lg transition border-r border-gray-200 last:border-r-0 flex flex-col items-center justify-center gap-3"
+                    >
+                        <span class="text-4xl">{{ tab.icon }}</span>
+                        <span>{{ tab.label }}</span>
+                    </button>
+                </div>
+
+                <!-- Tag-Filter -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <button 
+                        @click="selectedDay = 'alle'"
+                        :class="selectedDay === 'alle' ? 'bg-orange-500 text-white' : 'bg-white text-orange-600 hover:bg-orange-50'"
+                        class="px-6 py-2 rounded-full font-semibold text-sm transition shadow-md border-2 border-orange-500"
+                    >
+                        Alle Tage
+                    </button>
+                    <button 
+                        v-for="day in festivalDays" 
+                        :key="day.value"
+                        @click="selectedDay = day.value"
+                        :class="selectedDay === day.value ? 'bg-orange-500 text-white' : 'bg-white text-orange-600 hover:bg-orange-50'"
+                        class="px-6 py-2 rounded-full font-semibold text-sm transition shadow-md border-2 border-orange-500"
+                    >
+                        {{ day.label }}
+                    </button>
+                </div>
+
+                <!-- Tab Content: Musiker -->
+                <div v-show="activeTab === 'musiker'" class="animate-fadeIn">
+                    <!-- Bewerbungs-Banner -->
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-2xl p-6 mb-8 shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <span class="text-5xl">🎵</span>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">Du willst auf dem PAX Festival auftreten?</h3>
+                                <p class="text-purple-100 mb-3">Wir suchen noch Musiker und Bands für unser Lineup! Bewirb dich jetzt und werde Teil des PAX 2026.</p>
+                                <a href="https://github.com/yourrepo/PAX-Festival/blob/main/BEWERBUNG-FORMULAR-ANFORDERUNGEN.md" target="_blank" class="inline-flex items-center gap-2 bg-white text-purple-900 px-6 py-2 rounded-full font-semibold hover:bg-purple-50 transition">
+                                    📋 Bewerbungsinfos & Anforderungen
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="filteredMusiker.length === 0" class="text-center py-12">
+                        <p class="text-gray-600 text-lg">{{ musiker.length === 0 ? 'Das Musiker-Lineup wird bald bekannt gegeben...' : 'An diesem Tag gibt es keine Auftritte.' }}</p>
+                    </div>
+                    <div v-else class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div v-for="artist in filteredMusiker" :key="artist.id" class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                            <img 
+                                :src="artist.bild" 
+                                :alt="artist.name"
+                                class="w-full h-64 object-cover bg-gray-200"
+                                @error="$event.target.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23e5e7eb%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial,sans-serif%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBild folgt%3C/text%3E%3C/svg%3E'"
+                            />
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-purple-900 mb-2">{{ artist.name }}</h3>
+                                <p class="text-orange-600 font-semibold mb-2">{{ artist.genre }}</p>
+                                <p class="text-gray-600 text-sm mb-3">📍 {{ artist.land }}</p>
+                                <p class="text-gray-700 mb-4">{{ artist.beschreibung }}</p>
+                                
+                                <div v-if="artist.auftritte && artist.auftritte.length > 0" class="mb-4">
+                                    <div v-for="(auftritt, index) in artist.auftritte" :key="index" class="bg-purple-50 p-3 rounded-lg mb-2">
+                                        <p class="text-purple-900 font-semibold">🎵 {{ auftritt.tag }}</p>
+                                        <p class="text-gray-600 text-sm">{{ auftritt.uhrzeit }} • {{ auftritt.buehne }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <a v-if="artist.website" :href="artist.website" target="_blank" class="text-purple-700 hover:text-purple-900 text-sm">Website</a>
+                                    <a v-if="artist.social && artist.social.instagram" :href="artist.social.instagram" target="_blank" class="text-purple-700 hover:text-purple-900 text-sm">Instagram</a>
+                                    <a v-if="artist.social && artist.social.facebook" :href="artist.social.facebook" target="_blank" class="text-purple-700 hover:text-purple-900 text-sm">Facebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Workshops -->
+                <div v-show="activeTab === 'workshops'" class="animate-fadeIn">
+                    <!-- Bewerbungs-Banner -->
+                    <div class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-2xl p-6 mb-8 shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <span class="text-5xl">🎨</span>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">Du möchtest einen Workshop anbieten?</h3>
+                                <p class="text-orange-50 mb-3">Teile dein Wissen und deine Fähigkeiten! Bewerbe dich als Workshop-Leiter:in für PAX 2026.</p>
+                                <a href="https://github.com/yourrepo/PAX-Festival/blob/main/BEWERBUNG-FORMULAR-ANFORDERUNGEN.md" target="_blank" class="inline-flex items-center gap-2 bg-white text-orange-900 px-6 py-2 rounded-full font-semibold hover:bg-orange-50 transition">
+                                    📋 Bewerbungsinfos & Anforderungen
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="filteredWorkshops.length === 0" class="text-center py-12">
+                        <p class="text-gray-600 text-lg">{{ workshops.length === 0 ? 'Die Workshops werden bald bekannt gegeben...' : 'An diesem Tag gibt es keine Workshops.' }}</p>
+                    </div>
+                    <div v-else class="grid md:grid-cols-2 gap-8">
+                        <div v-for="workshop in filteredWorkshops" :key="workshop.id" class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                            <img 
+                                :src="workshop.bild" 
+                                :alt="workshop.titel"
+                                class="w-full h-48 object-cover bg-gray-200"
+                                @error="$event.target.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22300%22%3E%3Crect fill=%22%23e5e7eb%22 width=%22600%22 height=%22300%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial,sans-serif%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBild folgt%3C/text%3E%3C/svg%3E'"
+                            />
+                            <div class="p-6">
+                                <div class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                                    {{ workshop.kategorie }}
+                                </div>
+                                <h3 class="text-2xl font-bold text-purple-900 mb-2">{{ workshop.titel }}</h3>
+                                <p class="text-gray-600 font-semibold mb-3">Mit {{ workshop.leiter }}</p>
+                                <p class="text-gray-700 mb-4">{{ workshop.beschreibung }}</p>
+                                
+                                <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                                    <div>
+                                        <p class="text-gray-500">Dauer</p>
+                                        <p class="font-semibold">{{ workshop.dauer }}</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-500">Max. Teilnehmer</p>
+                                        <p class="font-semibold">{{ workshop.teilnehmer_max }}</p>
+                                    </div>
+                                </div>
+
+                                <div v-if="workshop.termine && workshop.termine.length > 0" class="mb-4">
+                                    <p class="font-semibold text-purple-900 mb-2">📅 Termine:</p>
+                                    <div v-for="(termin, index) in workshop.termine" :key="index" class="bg-purple-50 p-3 rounded-lg mb-2">
+                                        <p class="font-semibold">{{ termin.tag }}</p>
+                                        <p class="text-gray-600 text-sm">{{ termin.uhrzeit }} • {{ termin.ort }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="text-sm text-gray-600">
+                                    <p><strong>Voraussetzungen:</strong> {{ workshop.voraussetzungen }}</p>
+                                    <p><strong>Mitzubringen:</strong> {{ workshop.mitzubringen }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Vorträge -->
+                <div v-show="activeTab === 'vortraege'" class="animate-fadeIn">
+                    <!-- Bewerbungs-Banner -->
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-6 mb-8 shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <span class="text-5xl">🎤</span>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">Du hast eine inspirierende Botschaft?</h3>
+                                <p class="text-blue-50 mb-3">Werde Speaker beim PAX 2026! Teile deine Vision für eine friedvollere Welt mit uns.</p>
+                                <a href="https://github.com/yourrepo/PAX-Festival/blob/main/BEWERBUNG-FORMULAR-ANFORDERUNGEN.md" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-900 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition">
+                                    📋 Bewerbungsinfos & Anforderungen
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="filteredVortraege.length === 0" class="text-center py-12">
+                        <p class="text-gray-600 text-lg">{{ vortraege.length === 0 ? 'Die Vortragenden werden bald bekannt gegeben...' : 'An diesem Tag gibt es keine Vorträge.' }}</p>
+                    </div>
+                    <div v-else class="grid md:grid-cols-2 gap-8">
+                        <div v-for="vortrag in filteredVortraege" :key="vortrag.id" class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                            <img 
+                                :src="vortrag.bild" 
+                                :alt="vortrag.titel"
+                                class="w-full h-48 object-cover bg-gray-200"
+                                @error="$event.target.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22300%22%3E%3Crect fill=%22%23e5e7eb%22 width=%22600%22 height=%22300%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial,sans-serif%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBild folgt%3C/text%3E%3C/svg%3E'"
+                            />
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-purple-900 mb-2">{{ vortrag.titel }}</h3>
+                                <p class="text-gray-600 font-semibold mb-1">{{ vortrag.redner }}</p>
+                                <p class="text-orange-600 text-sm mb-4">{{ vortrag.organisation }}</p>
+                                <p class="text-gray-700 mb-4">{{ vortrag.beschreibung }}</p>
+                                
+                                <div v-if="vortrag.termin" class="bg-purple-50 p-4 rounded-lg mb-4">
+                                    <p class="font-semibold text-purple-900 mb-1">🎤 {{ vortrag.termin.tag }}</p>
+                                    <p class="text-gray-600">{{ vortrag.termin.uhrzeit }}</p>
+                                    <p class="text-gray-600 text-sm">📍 {{ vortrag.termin.ort }}</p>
+                                    <p class="text-gray-500 text-sm mt-2">⏱️ Dauer: {{ vortrag.dauer }}</p>
+                                </div>
+
+                                <div v-if="vortrag.themen && vortrag.themen.length > 0" class="flex flex-wrap gap-2">
+                                    <span v-for="(thema, index) in vortrag.themen" :key="index" class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">
+                                        {{ thema }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Aussteller -->
+                <div v-show="activeTab === 'aussteller'" class="animate-fadeIn">
+                    <!-- Bewerbungs-Banner -->
+                    <div class="bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-2xl p-6 mb-8 shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <span class="text-5xl">🛍️</span>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">Du möchtest als Aussteller dabei sein?</h3>
+                                <p class="text-green-50 mb-3">Präsentiere deine Produkte, Kunst oder Initiative auf dem PAX 2026! Bewirb dich für einen Stand.</p>
+                                <a href="https://github.com/yourrepo/PAX-Festival/blob/main/BEWERBUNG-FORMULAR-ANFORDERUNGEN.md" target="_blank" class="inline-flex items-center gap-2 bg-white text-green-900 px-6 py-2 rounded-full font-semibold hover:bg-green-50 transition">
+                                    📋 Bewerbungsinfos & Anforderungen
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="aussteller.length === 0" class="text-center py-12">
+                        <p class="text-gray-600 text-lg">Die Aussteller werden bald bekannt gegeben...</p>
+                    </div>
+                    <div v-else class="grid md:grid-cols-3 gap-8">
+                        <div v-for="stand in aussteller" :key="stand.id" class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                            <img 
+                                :src="stand.bild" 
+                                :alt="stand.name"
+                                class="w-full h-48 object-cover bg-gray-200"
+                                @error="$event.target.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23e5e7eb%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%239ca3af%22 font-family=%22Arial,sans-serif%22 font-size=%2224%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EBild folgt%3C/text%3E%3C/svg%3E'"
+                            />
+                            <div class="p-6">
+                                <div class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                                    {{ stand.kategorie }}
+                                </div>
+                                <h3 class="text-xl font-bold text-purple-900 mb-2">{{ stand.name }}</h3>
+                                <p class="text-gray-700 mb-3 text-sm">{{ stand.beschreibung }}</p>
+                                
+                                <div v-if="stand.angebot && stand.angebot.length > 0" class="mb-3">
+                                    <p class="font-semibold text-purple-900 text-sm mb-2">Angebot:</p>
+                                    <ul class="text-gray-600 text-sm space-y-1">
+                                        <li v-for="(item, index) in stand.angebot" :key="index">✓ {{ item }}</li>
+                                    </ul>
+                                </div>
+
+                                <div class="text-sm mb-3">
+                                    <p class="text-gray-600">📍 Stand: <span class="font-semibold">{{ stand.standnummer }}</span></p>
+                                    <p class="text-gray-600">🕐 {{ stand.oeffnungszeiten }}</p>
+                                </div>
+
+                                <a v-if="stand.website" :href="stand.website" target="_blank" class="text-purple-700 hover:text-purple-900 text-sm font-semibold">
+                                    Website besuchen →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Community Section -->
         <div class="relative h-[600px] overflow-hidden">
             <img 
@@ -332,7 +604,73 @@
                     formData: {
                         name: '',
                         email: ''
-                    }
+                    },
+                    // Tab System
+                    tabs: [
+                        { id: 'musiker', label: 'Musiker', icon: '🎵' },
+                        { id: 'workshops', label: 'Workshops', icon: '🎨' },
+                        { id: 'vortraege', label: 'Vorträge', icon: '🎤' },
+                        { id: 'aussteller', label: 'Aussteller', icon: '🛍️' }
+                    ],
+                    activeTab: 'musiker',
+                    // Tag-Filter
+                    selectedDay: 'alle',
+                    festivalDays: [
+                        { value: 'donnerstag', label: 'Do 23. Juli' },
+                        { value: 'freitag', label: 'Fr 24. Juli' },
+                        { value: 'samstag', label: 'Sa 25. Juli' },
+                        { value: 'sonntag', label: 'So 26. Juli' }
+                    ],
+                    // Program Data - Geladen aus JSON-Dateien
+                    musiker: [],
+                    workshops: [],
+                    vortraege: [],
+                    aussteller: [],
+                    // Loading States
+                    loading: {
+                        musiker: false,
+                        workshops: false,
+                        vortraege: false,
+                        aussteller: false
+                    },
+                    errors: {}
+                }
+            },
+            computed: {
+                activeData() {
+                    return this[this.activeTab];
+                },
+                filteredMusiker() {
+                    if (this.selectedDay === 'alle') return this.musiker;
+                    return this.musiker.filter(artist => {
+                        return artist.auftritte && artist.auftritte.some(auftritt => 
+                            this.matchDay(auftritt.tag)
+                        );
+                    }).map(artist => ({
+                        ...artist,
+                        auftritte: artist.auftritte.filter(auftritt => this.matchDay(auftritt.tag))
+                    }));
+                },
+                filteredWorkshops() {
+                    if (this.selectedDay === 'alle') return this.workshops;
+                    return this.workshops.filter(workshop => {
+                        return workshop.termine && workshop.termine.some(termin => 
+                            this.matchDay(termin.tag)
+                        );
+                    }).map(workshop => ({
+                        ...workshop,
+                        termine: workshop.termine.filter(termin => this.matchDay(termin.tag))
+                    }));
+                },
+                filteredVortraege() {
+                    if (this.selectedDay === 'alle') return this.vortraege;
+                    return this.vortraege.filter(vortrag => 
+                        vortrag.termin && this.matchDay(vortrag.termin.tag)
+                    );
+                },
+                filteredAussteller() {
+                    // Aussteller sind normalerweise alle Tage verfügbar
+                    return this.aussteller;
                 }
             },
             methods: {
@@ -344,6 +682,49 @@
                     } else {
                         alert('Bitte fülle beide Felder aus.');
                     }
+                },
+                setActiveTab(tabId) {
+                    this.activeTab = tabId;
+                },
+                async loadJSON(type) {
+                    if (this[type].length > 0) return; // Already loaded
+                    
+                    this.loading[type] = true;
+                    this.errors[type] = null;
+                    
+                    try {
+                        const response = await fetch(`data/${type}.json`);
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        const data = await response.json();
+                        this[type] = data;
+                    } catch (error) {
+                        console.error(`Error loading ${type}:`, error);
+                        this.errors[type] = `Fehler beim Laden der Daten: ${error.message}`;
+                    } finally {
+                        this.loading[type] = false;
+                    }
+                },
+                matchDay(tagString) {
+                    if (!tagString) return false;
+                    const tag = tagString.toLowerCase();
+                    const dayMap = {
+                        'donnerstag': ['donnerstag', '23'],
+                        'freitag': ['freitag', '24'],
+                        'samstag': ['samstag', '25'],
+                        'sonntag': ['sonntag', '26']
+                    };
+                    const keywords = dayMap[this.selectedDay];
+                    return keywords && keywords.some(keyword => tag.includes(keyword));
+                }
+            },
+            async mounted() {
+                // Load initial tab data
+                await this.loadJSON('musiker');
+            },
+            watch: {
+                // Load data when tab changes
+                activeTab(newTab) {
+                    this.loadJSON(newTab);
                 }
             }
         }).mount('#app');
