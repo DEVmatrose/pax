@@ -1,5 +1,48 @@
 # Finalisiertes Workpaper: PAX 2026 One-Pager
 
+## 📊 Implementierungs-Status (Stand: 07.01.2026)
+
+### ✅ Fertiggestellt
+
+- [x] **Hero-Bereich** - Gradient, Logo, Datum, Slogan komplett umgesetzt
+- [x] **Newsletter-Formular** - "Bist du dabei?" mit Name & E-Mail-Eingabe
+- [x] **Storytelling-Sektionen** - Alle 3 Sektionen mit Bildern und Texten implementiert
+  - Sektion 1: Ein Ort für die PAX Familie
+  - Sektion 2: Acht Tage Miteinander Sein
+  - Sektion 3: Für eine mitfühlendere Welt
+- [x] **Community & Social Media Sektion** - Mit Telegram & Instagram Buttons
+- [x] **Footer** - Mit Navigation (Home, Impressum, Datenschutz, Ticket-Rückgabe, Presse)
+- [x] **Sticky Ticket Button** - Floating Button rechts unten mit Pulse-Animation
+- [x] **Social Media Meta-Tags** - Vollständig für alle Plattformen (FB, IG, Twitter, Telegram, etc.)
+- [x] **Social Preview Bild** - pax-social-preview.png (1200 × 630 px)
+- [x] **Rechtliche Seiten** - Impressum, Datenschutz, Ticket-Rückgabe/AGB, Presse
+- [x] **Responsive Design** - Mobile-first mit Tailwind CSS
+- [x] **Farbschema** - Corporate Identity umgesetzt (#2E3192, #7B2B85, #FDB813)
+
+### 🔨 In Arbeit / Noch zu erledigen
+
+- [ ] **Tab-System Programm** - Musiker | Workshops | Vorträge | Aussteller (noch nicht implementiert)
+- [ ] **FAQ-Bereich** - Ausklappbare FAQs zu Festivalregeln (fehlt)
+- [ ] **Krasser Guru Booking** - Ticketshop-Integration (noch nicht verlinkt)
+- [ ] **Anfahrt-Sektion** - Detaillierte Anfahrtsbeschreibung mit Karte (fehlt)
+- [ ] **Newsletter-Backend** - Anbindung an Newsletter-System (aktuell nur Frontend)
+- [ ] **Social Media Links** - Echte URLs für Telegram & Instagram (aktuell Platzhalter)
+- [ ] **Rechtliche Daten** - Alle gelb markierten Platzhalter mit echten Daten füllen
+  - Firmenname, Geschäftsführer
+  - Adresse, Handelsregister
+  - Telefonnummer, E-Mail
+  - Pressekontakt-Daten
+
+### 📋 Offene Fragen (siehe Fragen.md)
+
+- Newsletter-System & E-Mail-Speicherung
+- Social Media Kanäle (vollständige Liste)
+- Ticketing (Preise, Kategorien, Vorverkaufsstart)
+- Programm-Inhalte (Musiker, Workshops, etc.)
+- Sponsoring & Werbeplätze
+
+---
+
 ## 1. Visuelles Leitthema
 
 - **Farbwelt:** Warme Gradienten von Tiefblau über Violett zu einem strahlenden Goldgelb.
@@ -8,26 +51,33 @@
 
 ## 2. Sektions-Struktur (Scroll-Reihenfolge)
 
-1. **Header & Hero:**
+1. **Header & Hero:** ✅ *Implementiert*
    - Logo, Datum (23. – 26. Juli 2026) und Ort (Freilichtbühne Friesack).
    - Slogan: "Die Friedenstaube landet wieder".
 
-2. **Newsletter-Hook:**
+2. **Newsletter-Hook:** ✅ *Implementiert*
    - "Bist du dabei?" – Direktes Formular für Vorverkauf-Infos.
+   - ⚠️ Backend-Anbindung fehlt noch
 
-3. **Vision & Mission:**
+3. **Vision & Mission:** ✅ *Implementiert*
    - "Ein Ort für die PAX Familie" und "Für eine mitfühlendere Welt".
 
-4. **Das Programm-Modul (Neu):**
+4. **Das Programm-Modul (Neu):** ⏳ *Ausstehend*
    - Hier wird das von dir gewünschte Tab-System integriert (Musiker, Workshops, Vorträge, Aussteller).
    - Grafisch im hellen Beigeton der mittleren Sektion gehalten.
 
-5. **Community & Mitmachen:**
+5. **Community & Mitmachen:** ✅ *Implementiert*
    - Bereich für Volunteers und Helfer.
    - Social Media Call-to-Action (Telegram & Instagram) mit dem Natur-Hintergrundbild.
 
-6. **Krasser Guru Booking:**
+6. **Krasser Guru Booking:** ⏳ *Ausstehend*
    - Ein auffälliger, farblich abgesetzter Block (z.B. im Violett des Footers) zur Ticketbuchung.
+   - Sticky Button vorhanden, Integration fehlt noch
+
+7. **FAQ & Rechtliches:** 🔨 *Teilweise*
+   - Ausklappbare FAQs zu Festivalregeln. ❌ *Fehlt*
+   - Footer in Dunkelblau mit Impressum, Datenschutz und Kontakt. ✅ *Vorhanden*
+   - Rechtliche Seiten erstellt, Platzhalter müssen gefüllt werden
 
 7. **FAQ & Rechtliches:**
    - Ausklappbare FAQs zu Festivalregeln.
@@ -35,11 +85,13 @@
 
 ## 3. Technische Features
 
-- **Tab-Navigation:** Ein sauberes JavaScript- oder CSS-Tab-Modul, das auf Mobilgeräten zu einem Accordion (untereinander klappbar) wird, um die Lesbarkeit zu garantieren.
-- **Sticky Booking Button:** Ein kleiner, mitschwebender Button "Tickets", der direkt zur Krasser Guru Seite führt.
-- **Anfahrt-Integration:** Kurzer Textblock zur Vietnitzer Straße 14 in 14662 Friesack.
+- **Tab-Navigation:** ⏳ *Ausstehend* - Ein sauberes JavaScript- oder CSS-Tab-Modul, das auf Mobilgeräten zu einem Accordion (untereinander klappbar) wird, um die Lesbarkeit zu garantieren.
+- **Sticky Booking Button:** ✅ *Implementiert* - Ein kleiner, mitschwebender Button "Tickets", der direkt zur Krasser Guru Seite führt.
+- **Anfahrt-Integration:** ⏳ *Ausstehend* - Kurzer Textblock zur Vietnitzer Straße 14 in 14662 Friesack.
 
 ## 4. Social Media Vorschau-Strategie
+
+### Status: ✅ Vollständig implementiert
 
 ### 4.1 Meta-Tags für optimale Vorschau
 
@@ -109,10 +161,10 @@ PAX26, Weltfriedensfestival, Festival, Friesack, Berlin, Musik, Workshops, Peace
 - Open Graph Check: https://opengraphcheck.com/
 
 **Checkliste:**
-- [ ] Vorschaubild erstellt (1200 × 630 px)
-- [ ] Bild optimiert und komprimiert
-- [ ] Meta-Tags implementiert
-- [ ] URL zu Produktions-Domain angepasst
+- [x] Vorschaubild erstellt (1200 × 630 px)
+- [x] Bild optimiert und komprimiert
+- [x] Meta-Tags implementiert
+- [ ] URL zu Produktions-Domain angepasst (aktuell Platzhalter)
 - [ ] Vorschau auf allen Plattformen getestet
 - [ ] Cache geleert (bei Updates)
 
@@ -120,7 +172,21 @@ PAX26, Weltfriedensfestival, Festival, Friesack, Berlin, Musik, Workshops, Peace
 
 # Technisches Workpaper: PAX 2026 One-Pager Relaunch
 
+## Status: 🔨 In aktiver Entwicklung
+
+### Bereits implementierte Dateien:
+- ✅ **index.html** - Hauptseite mit Hero, Newsletter, Sektionen, Footer
+- ✅ **impressum.html** - Vollständiges Impressum (Platzhalter zu füllen)
+- ✅ **datenschutz.html** - DSGVO-konforme Datenschutzerklärung (Platzhalter zu füllen)
+- ✅ **rueckgabe.html** - AGB & Ticket-Rückgabe Regelungen (Platzhalter zu füllen)
+- ✅ **presse.html** - Pressebereich mit Akkreditierung & Materialien (Platzhalter zu füllen)
+- ✅ **src/assets/images/pax-social-preview.png** - Social Media Vorschaubild
+
+---
+
 ## 1. Hero-Bereich (Emotionale Einleitung)
+
+### Status: ✅ Vollständig implementiert
 
 - **Hintergrund:** Vertikaler Farbverlauf von Tiefblau (#2E3192) über Violett zu einem warmen Sonnengelb (#FDB813).
 - **Inhalt:**
@@ -132,24 +198,28 @@ PAX26, Weltfriedensfestival, Festival, Friesack, Berlin, Musik, Workshops, Peace
 
 ## 2. Storytelling-Sektionen (Weißer/Beiger Hintergrund)
 
+### Status: ✅ Vollständig implementiert
+
 Dieser Bereich nutzt abwechselnd Text links/Bild rechts und umgekehrt.
 
-### Sektion 1: Ein Ort für die PAX Familie
+### Sektion 1: Ein Ort für die PAX Familie ✅
 
 - **Bild:** Frau mit Seifenblasen.
 - **Text:** Fokus auf die Location (Vietnitzer Straße 14, 14662 Friesack) und den toleranten Raum für alle.
 
-### Sektion 2: Acht Tage Miteinander Sein
+### Sektion 2: Acht Tage Miteinander Sein ✅
 
 - **Bild:** Drei Personen in warmem, rotem Licht.
 - **Text:** Hinweis auf die Campwoche (21. – 28. Juli) und das Programm (Tanzen, Vorträge, Workshops, Lagerfeuer).
 
-### Sektion 3: Eine mitfühlendere Welt
+### Sektion 3: Eine mitfühlendere Welt ✅
 
 - **Bild:** Festivalbesucher mit erhobenen Händen.
 - **Text:** Die Vision eines menschlichen Miteinanders.
 
 ## 3. Das Tab-System (Programmvorschau)
+
+### Status: ⏳ Noch nicht implementiert - Hohe Priorität
 
 Neu einzufügen unterhalb der Story-Sektionen:
 
@@ -159,11 +229,30 @@ Neu einzufügen unterhalb der Story-Sektionen:
 
 ## 4. Community & Social Media (Footer-Vorbereitung)
 
+### Status: ✅ Implementiert (Social Media Links noch Platzhalter)
+
 - **Hintergrund:** Foto einer Menschengruppe auf einer Wiese mit violettem Overlay.
 - **Headline:** "Werde jetzt Teil der Pax Familie und verpasse keine Neuigkeiten mehr:".
 - **Buttons:** "Telegram Kanal abonnieren" und "Instagram Kanal abonnieren" (Dunkelviolett mit Icons).
+- ⚠️ **TODO:** Echte Social Media URLs einfügen
 
 ## 5. Rechtlicher Bereich (Dunkelvioletter Footer)
 
-- **Inhalt:** PAX Logo (weiß), Navigationslinks (Home, Impressum), sowie Text "PAX – Das Weltfriedensfestival".
-- **Ergänzung für 2026:** Hier werden die Links für Datenschutz und die neuen Festivalregeln platziert.
+### Status: ✅ Implementiert (Platzhalter-Daten zu füllen)
+
+- **Inhalt:** PAX Logo (weiß), Navigationslinks (Home, Impressum, Datenschutz, Ticket-Rückgabe, Presse), sowie Text "PAX – Das Weltfriedensfestival".
+- **Ergänzung für 2026:** Links für Datenschutz und die neuen Festivalregeln sind vorhanden.
+- ⚠️ **TODO:** Alle gelb markierten Platzhalter in den rechtlichen Seiten mit echten Daten füllen
+
+---
+
+## Nächste Schritte (Priorisiert)
+
+1. **Hoch:** Tab-System für Programm implementieren
+2. **Hoch:** Platzhalter in rechtlichen Seiten füllen (Impressum, Datenschutz, etc.)
+3. **Mittel:** FAQ-Bereich mit ausklappbaren Elementen erstellen
+4. **Mittel:** Krasser Guru Ticketshop-Integration
+5. **Mittel:** Newsletter-Backend anbinden
+6. **Niedrig:** Anfahrt-Sektion mit Karte hinzufügen
+7. **Niedrig:** Social Media URLs aktualisieren
+8. **Niedrig:** Domain-URL in Meta-Tags anpassen
