@@ -33,6 +33,67 @@
   - Telefonnummer, E-Mail
   - Pressekontakt-Daten
 
+### 🌐 Website-Optimierung & SEO (aus Website-Check)
+
+#### Meta-Elemente & HTML-Struktur
+- [ ] **HTML lang-Attribut** - `<html lang="de">` korrekt setzen
+- [ ] **Meta Description** - Optimierte Beschreibung für Suchmaschinen (155-160 Zeichen)
+- [ ] **Meta Keywords** - Relevante Keywords hinzufügen
+- [ ] **Canonical URL** - Canonical Tags zur Vermeidung von Duplicate Content
+- [ ] **Viewport Meta-Tag** - ✅ Bereits vorhanden
+- [ ] **Charset UTF-8** - ✅ Bereits vorhanden
+- [ ] **Favicon** - Icon für Browser-Tab und Bookmarks (favicon.ico, verschiedene Größen)
+- [ ] **Apple Touch Icons** - Icons für iOS-Geräte
+
+#### Strukturierte Daten & Schema.org
+- [ ] **Schema.org Markup** - Event-Markup für Festival (JSON-LD)
+  - Event-Name, Datum, Location
+  - Ticket-URL, Preise
+  - Performer/Künstler
+- [ ] **Breadcrumb Navigation** - Strukturierte Breadcrumbs
+- [ ] **Organization Schema** - Informationen über Veranstalter
+
+#### Überschriften & Content-Struktur
+- [ ] **H1-Überschrift** - Nur eine H1 pro Seite, sinnvoll strukturiert
+- [ ] **H2-H6 Hierarchie** - Logische Überschriftenstruktur ohne Sprünge
+- [ ] **Alt-Texte für Bilder** - Alle Bilder mit beschreibenden Alt-Attributen
+- [ ] **Interne Verlinkung** - Sinnvolle interne Links zwischen Seiten
+
+#### Technische Optimierung
+- [ ] **SSL/HTTPS** - Vollständige HTTPS-Verschlüsselung aktivieren
+- [ ] **robots.txt** - Datei für Suchmaschinen-Crawler erstellen
+- [ ] **sitemap.xml** - XML-Sitemap für bessere Indexierung
+- [ ] **Google Search Console** - Einrichtung und Verifizierung
+- [ ] **Google Analytics / Matomo** - Tracking-System integrieren (DSGVO-konform)
+- [ ] **Cookie-Banner** - Cookie-Consent-Tool implementieren (DSGVO)
+- [ ] **Page Speed Optimierung** - Bilder komprimieren, Lazy Loading
+- [ ] **Caching** - Browser-Caching aktivieren
+- [ ] **Minifizierung** - CSS/JS minifizieren für schnellere Ladezeiten
+
+#### Performance & Loading
+- [ ] **Bildoptimierung** - WebP-Format, responsive Images, Lazy Loading
+- [ ] **Font-Optimierung** - Google Fonts lokal hosten oder optimiert laden
+- [ ] **CDN-Nutzung** - Content Delivery Network für Assets (aktuell: Tailwind/Vue CDN)
+- [ ] **Critical CSS** - Above-the-fold CSS inline laden
+
+#### Accessibility (Barrierefreiheit)
+- [ ] **ARIA-Labels** - Für Screen Reader optimieren
+- [ ] **Kontrast-Verhältnisse** - WCAG 2.1 AA Standard einhalten
+- [ ] **Keyboard-Navigation** - Vollständige Tastatursteuerung
+- [ ] **Focus-Indikatoren** - Sichtbare Focus-States für Interaktive Elemente
+
+#### Social Media Integration
+- [ ] **Open Graph Tags** - ✅ Bereits implementiert
+- [ ] **Twitter Cards** - ✅ Bereits implementiert
+- [ ] **Social Share Buttons** - Optional: Share-Buttons für Inhalte
+
+#### Rechtliches & Compliance
+- [ ] **Impressum** - ✅ Seite erstellt, Daten einfügen
+- [ ] **Datenschutzerklärung** - ✅ Seite erstellt, Daten einfügen
+- [ ] **Cookie-Richtlinie** - Detaillierte Cookie-Policy
+- [ ] **AGB** - ✅ In Ticket-Rückgabe enthalten, Daten einfügen
+- [ ] **Barrierefreiheitserklärung** - Optional nach BITV 2.0
+
 ### 📋 Offene Fragen (siehe Fragen.md)
 
 - Newsletter-System & E-Mail-Speicherung
@@ -248,11 +309,30 @@ Neu einzufügen unterhalb der Story-Sektionen:
 
 ## Nächste Schritte (Priorisiert)
 
-1. **Hoch:** Tab-System für Programm implementieren
-2. **Hoch:** Platzhalter in rechtlichen Seiten füllen (Impressum, Datenschutz, etc.)
-3. **Mittel:** FAQ-Bereich mit ausklappbaren Elementen erstellen
-4. **Mittel:** Krasser Guru Ticketshop-Integration
-5. **Mittel:** Newsletter-Backend anbinden
-6. **Niedrig:** Anfahrt-Sektion mit Karte hinzufügen
-7. **Niedrig:** Social Media URLs aktualisieren
-8. **Niedrig:** Domain-URL in Meta-Tags anpassen
+### 🔴 Kritisch (vor Go-Live)
+1. **SSL/HTTPS aktivieren** - Sicherheit und SEO
+2. **Platzhalter füllen** - Alle rechtlichen Seiten mit echten Daten
+3. **Cookie-Banner** - DSGVO-Compliance
+4. **robots.txt & sitemap.xml** - SEO-Grundlagen
+5. **Favicon** - Professioneller Auftritt
+
+### 🟠 Hoch (zeitnah)
+1. **Tab-System für Programm** - Hauptfeature für Programm-Darstellung
+2. **Schema.org Event-Markup** - SEO für Festival-Events
+3. **Google Search Console** - Indexierung und Monitoring
+4. **Bildoptimierung** - WebP, Lazy Loading für Performance
+5. **Alt-Texte für alle Bilder** - Accessibility & SEO
+
+### 🟡 Mittel (nach Launch möglich)
+1. **FAQ-Bereich** - Ausklappbare FAQs
+2. **Krasser Guru Integration** - Ticketshop-Anbindung
+3. **Newsletter-Backend** - E-Mail-System anbinden
+4. **Google Analytics/Matomo** - Tracking implementieren
+5. **H1-H6 Struktur optimieren** - Content-Hierarchie
+
+### 🟢 Niedrig (Nice-to-have)
+1. **Anfahrt-Sektion mit Karte** - Google Maps Integration
+2. **Social Share Buttons** - Content-Sharing
+3. **CDN für Assets** - Performance-Optimierung
+4. **Critical CSS** - Above-the-fold Optimierung
+5. **PWA-Features** - Progressive Web App Funktionen
