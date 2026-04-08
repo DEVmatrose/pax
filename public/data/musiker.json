@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "name": "Arne Schmitt",
+    "subtitle": "Piano across the world",
+    "bio": "Der Mann am Klavier – Piano across the world. „Das Leben ist eine Reise, die Musik ist meine Leidenschaft." Mit seinem treuen Konzertflügel reist er seit Jahrzehnten quer durch die Welt und teilt seine Leidenschaft für die Musik mit den Menschen auf der Straße.",
+    "genre": "Straßenmusik",
+    "tage": ["Mittwoch", "Samstag"],
+    "website": "http://www.arne-schmitt.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/PianoAcrossTheWorld",
+      "instagram": "https://www.instagram.com/pianoacrosstheworld",
+      "youtube": "https://www.youtube.com/@PianoAcrossTheWorld"
+    }
+  },
+  {
+    "id": 2,
+    "name": "ÄON",
+    "subtitle": "Musik für Herz und Verstand",
+    "bio": "ÄON steht für philosophischen Rap zwischen Tiefgang, Spiritualität und Gesellschaftskritik. Seit seinem ersten Release im Jahr 2012 sind über 150 Songs und insgesamt sieben Alben entstanden.",
+    "genre": "Rap / Hip Hop",
+    "tage": ["Freitag"],
+    "website": "http://www.aeon-music.de/",
+    "social": {
+      "facebook": "https://www.facebook.com/AeonLyrics/",
+      "instagram": "https://www.instagram.com/aeon_offiziell/",
+      "youtube": "https://www.youtube.com/c/%C3%84onOfficial"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Jens Fischer-Rodrian",
+    "subtitle": "Soundtrack für die Fantasie der Leute",
+    "bio": "Musiker, Lyriker, freier Publizist und Bürgerrechtsaktivist. Kreativdirektor und Musiker für die Blue Man Group. Begleitet die Demokratiebewegung mit der BasisBandBerlin.",
+    "genre": "Alle Genres sprengende, kreative Widerstands-Musik",
+    "tage": ["Donnerstag", "Freitag"],
+    "website": "http://www.wahnundsinn.com/",
+    "social": {
+      "youtube": "http://www.youtube.com/@protestnoten"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Katja von Bauske",
+    "subtitle": "Mindful Deep Spirit Global Acoustic Pop",
+    "bio": "Singer-Songwriterin aus Hamburg mit einzigartigem Stil zwischen globaler, spiritueller und akustischer Musik. Ihr drittes Album „Project New Earth" verbindet nordische Klanglandschaften mit visionärem Storytelling.",
+    "genre": "Singer / Songwriter",
+    "tage": ["Donnerstag"],
+    "website": "http://www.katja-von-bauske.com/",
+    "social": {
+      "instagram": "https://www.instagram.com/katjavonbauske_traumfaengerin",
+      "youtube": "https://www.youtube.com/@katjavonbauske"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Konstantin",
+    "subtitle": "Musik, die verbindet",
+    "bio": "Konstantins Musik ist echt. Jedes Wort trifft den Punkt, jede Zeile rührt tief im Herzen etwas an. Er erschafft ein positives Lebensgefühl mit kraftvollen Kompositionen.",
+    "genre": "Spiritueller Hip Hop / Conscious Pop",
+    "tage": ["Samstag"],
+    "website": "http://www.konstantin-music.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/KonstantinMusicFreeSpirit",
+      "instagram": "https://www.instagram.com/konstantin_music",
+      "youtube": "https://www.youtube.com/@konstantinmusic_spirit"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Laura Maria Schneider",
+    "subtitle": "Poesie, die die Seele berührt",
+    "bio": "Lichtbringerin, Stimme der Neuen Zeit, Lyrikerin und Moderatorin. Bekannt aus der ARD Serie „Marienhof". Mit ihrem Lied „Baum der Seelen" erreichte sie über eine halbe Million Aufrufe auf YouTube.",
+    "genre": "Hochschwingender, lyrischer Sprechgesang",
+    "tage": ["Freitag"],
+    "website": "http://www.lauraschneider.de/",
+    "social": {
+      "facebook": "https://www.facebook.com/schneiderlauramaria",
+      "instagram": "https://www.instagram.com/lauraschneider_official",
+      "youtube": "https://www.youtube.com/@lauraschneider_official"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Menzel",
+    "subtitle": "Dance Mukke vom Würzburger Newcomer-Duo",
+    "bio": "MENZEL verbindet Alternative Indie Dance Pop mit sehnsüchtiger Lebenslust. Max und Tabea bringen die perfekte Symbiose aus Tanzbarkeit und Emotion auf jedes Festival.",
+    "genre": "Alternative Pop / Indie Dance",
+    "tage": ["Samstag"],
+    "website": "http://www.menzelmusic.de/",
+    "social": {
+      "instagram": "https://www.instagram.com/menzel_music/",
+      "youtube": "https://www.youtube.com/@menzelmusic",
+      "spotify": "https://open.spotify.com/intl-de/artist/7fNacOxPmiiMwyDV0K71MX"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Rairda",
+    "subtitle": "Klänge aus dem Elfenwald",
+    "bio": "Rairda verbindet Oben und Unten. Selbstkomponierten Lieder über Liebe, Natur und Magie – in Deutsch, Englisch, Gälisch und in ihrer eigenen Elfensprache. Mit Harfe, Klavier, Synthi, Trommeln und Flöten.",
+    "genre": "Mystic Voice",
+    "tage": ["Donnerstag"],
+    "website": "http://www.rairda.de/",
+    "social": {
+      "youtube": "https://www.youtube.com/@rairda-mysticvoice2227"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Tino Eisbrenner & Band",
+    "subtitle": "Wer Frieden will, muss Frieden denken",
+    "bio": "Songpoet und engagierter Friedenskünstler. „Eisbrenner & Tatanka Yotanka" steht für das Rockkonzept mit Mathias Fuhrmann und Oliver Siegmann. Sein Oeuvre umfasst 23 musikalische und zwei literarische Alben sowie 5 Bücher.",
+    "genre": "Songpoet",
+    "tage": ["Donnerstag", "Freitag"],
+    "website": "http://www.eisbrenner.de/",
+    "social": {
+      "youtube": "http://www.youtube.com/@t.eisbrenner8867"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Yann Song King",
+    "subtitle": "Meister der Songparodie",
+    "bio": "YSK ist DER Spezialist für Songparodien. Seine messerscharf geschliffenen Texte mit ironischem Unterton graben sich leicht ins Gedächtnis ein. Live allein mit seiner Gitarre – ein alternativer Alleinunterhalter.",
+    "genre": "Übertreibungsverharm-losender Alleinunterhalter",
+    "tage": ["Samstag"],
+    "website": "http://www.yannsongking.de/",
+    "social": {}
+  }
+]

@@ -90,6 +90,41 @@ Siehe [data/README.md](data/README.md) für:
 
 ---
 
+## 🔗 Nextcloud Integration (NEU!)
+
+Die Website kann jetzt **direkt mit Nextcloud Tables** verbunden werden!
+
+### Vorteile
+✅ **Orga-Team arbeitet direkt in Nextcloud** (keine JSON-Bearbeitung nötig)  
+✅ **Automatische Synchronisation** (alle 15 Minuten)  
+✅ **Live-Updates** möglich (`window.paxReloadData()`)  
+✅ **Fallback auf lokale JSON** bei Verbindungsproblemen  
+
+### Quick Start
+
+**Entwicklung (Standard):**
+```javascript
+// In src/config.js:
+useDevelopmentMode: true  // Nutzt lokale JSON-Dateien
+```
+
+**Production (Nextcloud):**
+1. Nextcloud Tables App installieren
+2. 4 Tabellen erstellen (Musiker, Workshops, Vorträge, Aussteller)
+3. `src/config.js` mit Nextcloud-Zugangsdaten konfigurieren
+4. `useDevelopmentMode: false` setzen
+
+### Dokumentation
+- **Vollständige Anleitung:** [NEXTCLOUD-INTEGRATION.md](NEXTCLOUD-INTEGRATION.md)
+- **Quick Start:** [NEXTCLOUD-QUICKSTART.md](NEXTCLOUD-QUICKSTART.md)
+
+### Dateien
+- `src/config.js` - Konfiguration & Zugangsdaten
+- `src/nextcloud-api.js` - API-Integration
+- `.env.example` - Umgebungsvariablen-Vorlage
+
+---
+
 ## 📧 Bewerbungssystem
 
 ### Für Programm-Teilnehmer
