@@ -1,11 +1,29 @@
-<template>
-  <div class="min-h-screen bg-[#f5ede0]">
+<script setup>
+import SectionPhotoHero from '@/components/SectionPhotoHero.vue'
+import heroImg from '@/assets/images/prog-hero-healing.png'
+</script>
 
-    <!-- Page Header -->
-    <div class="bg-gradient-to-r from-pax-purple to-pax-blue py-16 px-4 text-center text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-3">Healing-Area</h1>
-      <p class="text-lg opacity-90">Entspannung · Spiritualität · Geistiges Wohlbefinden</p>
-    </div>
+<template>
+  <div>
+    <SectionPhotoHero
+      :img-src="heroImg"
+      headline="Unser Healingbereich"
+    />
+
+    <!-- Info-Box -->
+    <section class="bg-pax-gold text-white py-12 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl font-bold leading-relaxed">
+          Hier findest du eine alphabetische Auflistung der bisherigen Zusagen für unser Programm.
+        </p>
+        <p class="mt-4 leading-relaxed">
+          Wenn du übersichtlich und aktuell über neue Zusagen infomiert werden möchtest, dann melde
+          dich jetzt für unsere
+          <a href="https://pax.family/#newsletter" target="_blank" rel="noopener noreferrer" class="underline font-bold">Friedenspost</a>
+          an.
+        </p>
+      </div>
+    </section>
 
     <div class="max-w-3xl mx-auto px-4 py-12 space-y-10">
 

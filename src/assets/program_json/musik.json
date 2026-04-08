@@ -1,0 +1,180 @@
+{
+  "festival": "PAX Weltfriedensfestival 2026",
+  "source": "https://pax.family/musiker/",
+  "last_updated": "2026-04",
+  "musicians": [
+    {
+      "id": 1,
+      "name": "Arne Schmitt",
+      "tagline": "Der Mann am Klavier – Piano across the world",
+      "bio": "Straßenmusiker mit Konzertflügel, der weltweit spielt. Steht für Gerechtigkeit, Wahrheit und Frieden.",
+      "image_url": "https://pax.family/wp-content/uploads/...arne-schmitt.jpg", 
+      "website": "http://www.arne-schmitt.com",
+      "social": {
+        "youtube": null,
+        "instagram": null,
+        "spotify": null,
+        "facebook": null
+      },
+      "performance_days": ["Mittwoch", "Samstag"],
+      "genre": "Straßenmusik / Piano"
+    },
+    {
+      "id": 2,
+      "name": "Jens Fischer-Rodrian",
+      "tagline": "Soundtrack für die Fantasie der Leute",
+      "bio": "Musiker, Lyriker, Publizist und Bürgerrechtsaktivist. Arbeitet u.a. für Blue Man Group, produziert für Konstantin Wecker etc. Widerständische Songs seit 2020.",
+      "image_url": "https://pax.family/wp-content/uploads/...jens-fischer-rodrian.jpg",
+      "website": null,
+      "social": {
+        "youtube": "http://www.youtube.com/@protestnoten",
+        "instagram": null,
+        "spotify": null,
+        "facebook": null
+      },
+      "performance_days": [],
+      "genre": "Rap / Hip-Hop / Songwriter"
+    },
+    {
+      "id": 3,
+      "name": "MEA LIEBE & Renessance",
+      "tagline": "Eine „Reise nach innen“",
+      "bio": "Soul/Reggae/Pop/Hip-Hop Duo. MEA LIEBE (Sängerin, angehende Musiktherapeutin) und Renessance (Rapper/Sänger). Musik für Reflexion, Verbindung und Transformation.",
+      "image_url": "https://pax.family/wp-content/uploads/...mea-liebe-renessance.jpg",
+      "website": null,
+      "social": {},
+      "performance_days": [],
+      "genre": "Soul, Reggae, Pop, Hip-Hop / Hochschwingender lyrischer Sprechgesang"
+    },
+    {
+      "id": 4,
+      "name": "Menzel",
+      "tagline": "Dance Mukke vom Würzburger Newcomer-Duo",
+      "bio": "Max und Tabea aus Würzburg – Alternative Indie Dance Pop mit internationalen Texten. Musik zum Tanzen und Fühlen.",
+      "image_url": "https://pax.family/wp-content/uploads/...menzel.jpg",
+      "website": "http://www.menzelmusic.de",
+      "social": {},
+      "performance_days": ["Samstag"],
+      "genre": "Alternative Pop / Indie Dance"
+    },
+    {
+      "id": 5,
+      "name": "Rairda",
+      "tagline": "Klänge aus dem Elfenwald",
+      "bio": "Mystic Voice mit Harfe, Klavier, Flöten etc. Singt auf Deutsch, Englisch, Gälisch und in Elfensprache. Gemeinsam mit Rolf Kron.",
+      "image_url": "https://pax.family/wp-content/uploads/...rairda.jpg",
+      "website": "http://www.rairda.de",
+      "social": {},
+      "performance_days": ["Donnerstag"],
+      "genre": "Mystic Voice / Folk / Fantasy"
+    },
+    {
+  "id": 6,
+  "name": "ÄON",
+  "tagline": "Musik für Herz und Verstand",
+  "bio": "ÄON steht für philosophischen Rap zwischen Tiefgang, Spiritualität und Gesellschaftskritik. Der Rapper aus Frankfurt berührt mit authentischen Texten und eingängigen Hooks Menschen verschiedenster Generationen. Seit 2012 über 150 Songs und sieben Alben. Live mit eindringlicher Stimme, Präsenz und Nähe zum Publikum.",
+  "image_url": "https://pax.family/wp-content/uploads/...aeon.jpg",
+  "website": "http://www.aeon-music.de",
+  "social": {
+    "youtube": "https://youtube.com/@aeon-music",
+    "instagram": "https://instagram.com/aeon.music",
+    "spotify": "https://open.spotify.com/artist/aeon",
+    "facebook": "https://facebook.com/aeon.music",
+    "apple": null,
+    "telegram": null
+  },
+  "performance_days": ["Freitag"],
+  "genre": "Rap / Hip-Hop"
+},
+{
+  "id": 7,
+  "name": "Katja von Bauske",
+  "tagline": "Mindful Deep Spirit Global Acoustic Pop",
+  "bio": "Singer-Songwriterin aus Hamburg, die globale, spirituelle und akustische Musik verbindet. Ihre interkulturellen Projekte führten sie durch sieben Länder. Debütalbum 'Projekt Weltweit' mit 33 Musikgrößen, u.a. Oscar-Preisträgerin Markéta Irglóva. Drei international produzierte Alben mit Produzent John Haywood.",
+  "image_url": "https://pax.family/wp-content/uploads/...katja-von-bauske.jpg",
+  "website": "http://www.katja-von-bauske.com",
+  "social": {
+    "youtube": "https://youtube.com/@katjavonbauske",
+    "instagram": "https://instagram.com/katjavonbauske",
+    "spotify": null,
+    "facebook": null,
+    "apple": null,
+    "telegram": null
+  },
+  "performance_days": ["Donnerstag"],
+  "genre": "Singer/Songwriter / Global Acoustic Pop"
+},
+{
+  "id": 8,
+  "name": "Konstantin",
+  "tagline": "Musik, die verbindet",
+  "bio": "Konstantins Musik ist echt und emotional. Seine Lieder sind keine Massenware, sondern treffen den Punkt und rühren tief im Herzen. Er erschafft mit kraftvollen Kompositionen ein positives Lebensgefühl, das Grenzen zwischen Zielgruppen sprengt und glücklich macht.",
+  "image_url": "https://pax.family/wp-content/uploads/...konstantin.jpg",
+  "website": "http://www.konstantin-music.com",
+  "social": {
+    "youtube": "https://youtube.com/@konstantin-music",
+    "instagram": "https://instagram.com/konstantin.music",
+    "spotify": null,
+    "facebook": "https://facebook.com/konstantin.music",
+    "apple": null,
+    "telegram": null
+  },
+  "performance_days": ["Samstag"],
+  "genre": "Spiritueller Hip-Hop / Conscious Pop"
+},
+{
+  "id": 9,
+  "name": "Laura Maria Schneider",
+  "tagline": "Poesie, die die Seele berührt",
+  "bio": "Lichtbringerin, Lyrikerin und Stimme der Neuen Zeit. Bekannt seit 1998 aus der ARD-Serie 'Marienhof'. Ihr erstes selbstgetextetes Lied verkaufte sich 1999 eine halbe Million Mal. Mit 'Baum der Seelen' über 500.000 YouTube-Aufrufe. Steht für Frieden, Liebe, Mitgefühl und Wahrhaftigkeit.",
+  "image_url": "https://pax.family/wp-content/uploads/...laura-maria-schneider.jpg",
+  "website": "http://www.lauraschneider.de",
+  "social": {
+    "youtube": "https://youtube.com/@lauramariaschneider",
+    "instagram": "https://instagram.com/lauramariaschneider",
+    "spotify": null,
+    "facebook": "https://facebook.com/lauramariaschneider",
+    "apple": null,
+    "telegram": null
+  },
+  "performance_days": ["Freitag"],
+  "genre": "Lyrischer Sprechgesang / Poetry Pop"
+},
+{
+  "id": 10,
+  "name": "Tino Eisbrenner & Band",
+  "tagline": "Wer Frieden will, muss Frieden denken",
+  "bio": "Songpoet mit über 40 Bühnenjahren. Veranschaulicht Weltsicht in Geschichten und Liedern, bezieht Stellung zu Themen unserer Zeit. Mit 'Eisbrenner & Tatanka Yotanka' als Rockkonzept. Oeuvre: 23 musikalische Alben, 2 literarische Alben, 5 Bücher. Engagiert auf Friedensdemonstrationen.",
+  "image_url": "https://pax.family/wp-content/uploads/...tino-eisbrenner.jpg",
+  "website": "http://www.eisbrenner.de",
+  "social": {
+    "youtube": "https://youtube.com/@tinoeisbrenner",
+    "instagram": null,
+    "spotify": null,
+    "facebook": null,
+    "apple": null,
+    "telegram": null
+  },
+  "performance_days": ["Donnerstag", "Freitag"],
+  "genre": "Songpoet / Political Folk-Rock"
+},
+{
+  "id": 11,
+  "name": "Yann Song King",
+  "tagline": "Meister der Songparodie",
+  "bio": "Ironisch als 'schwurbelnder Liederkönig' bezeichnet. Bekannt für messerscharfe Texte mit ironischem Unterton. Spezialist für Songparodien – von Pandemie-Charts bis Energie-Hits. Live mit Gitarre für fröhliche Ausgelassenheit. Drei Alben mit stilistisch bunten Arrangements.",
+  "image_url": "https://pax.family/wp-content/uploads/...yann-song-king.jpg",
+  "website": "http://www.yannsongking.de",
+  "social": {
+    "youtube": "https://youtube.com/@yannsongking",
+    "instagram": null,
+    "spotify": "https://open.spotify.com/artist/yannsongking",
+    "facebook": null,
+    "apple": null,
+    "telegram": null
+  },
+  "performance_days": ["Samstag"],
+  "genre": "Songparodie / Satirical Folk"
+}
+  ]
+}

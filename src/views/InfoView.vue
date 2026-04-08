@@ -1,39 +1,64 @@
 <template>
   <div class="min-h-screen bg-[#f5ede0]">
 
-    <!-- Page Header -->
-    <div class="bg-gradient-to-r from-pax-blue to-pax-purple py-16 px-4 text-center text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-3">Festival-Info</h1>
-      <p class="text-lg opacity-90">23. – 26. Juli 2026 · Friesack</p>
+    <!-- Hero -->
+    <div class="relative w-full overflow-hidden" style="min-height: 480px;">
+      <img :src="heroImg" alt="Festival-Woche" class="absolute inset-0 w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-black/50" />
+      <div class="relative z-10 flex flex-col justify-end h-full px-6 md:px-16 py-12" style="min-height: 480px;">
+        <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight max-w-2xl">
+          Eine Festival-Woche in Fülle und Frieden
+        </h1>
+      </div>
     </div>
+
+    <!-- Box 1: Bild links, Text rechts — Campwoche -->
+    <section class="bg-[#f5ede0] py-16 px-4">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <img :src="box1Img" alt="Campwoche" class="w-full h-auto rounded-2xl object-cover" />
+        </div>
+        <div class="space-y-4 text-gray-800">
+          <h2 class="text-2xl md:text-3xl font-bold text-[#342268] leading-tight">
+            Eine Festival-Woche in Fülle und Frieden
+          </h2>
+          <p>Nicht nur unser liebevoll gestaltetes Programm vom 23. bis 26. Juli 2026 ist eine Reise zu uns nach Friesack wert.</p>
+          <p>Auf vielfachen Wunsch und um euch noch mehr gemeinsame Zeit zu ermöglichen, haben wir bereits letztes Jahr alles in Bewegung gesetzt, um euch die Tore länger geöffnet zu halten.</p>
+          <p>Die Campwoche beginnt dieses Jahr am Dienstag den 21. und endet am 28. Juli.</p>
+          <p>Eine absolute Empfehlung, sich diese Zeit zu nehmen! Wer möchte, kann sich beim Auf- und Abbau beteiligen oder einfach eine schöne Zeit vor Ort verbringen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Box 2: Text links, Bild rechts — Was ist PAX? -->
+    <section class="bg-white py-16 px-4">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-4 text-gray-800">
+          <h2 class="text-2xl md:text-3xl font-bold text-[#342268] leading-tight">
+            Was ist das PAX Weltfriedensfestival?
+          </h2>
+          <p>Das PAX Weltfriedensfestival ist ein gemeinnütziges Festival für die ganze Familie, das sich dem Frieden auf allen Ebenen verschrieben hat.</p>
+          <p>Menschen aller Altersklassen kommen hier für vier Tage zusammen, um gemeinsam an konkreten Lösungsvorschlägen für eine friedlichere, bessere Welt zu arbeiten – sei es auf persönlicher, gesellschaftlicher oder politischer Ebene.</p>
+          <p>Das PAX möchte die Meinungsbildung unter der Voraussetzung von Offenheit und Integration fördern. Unsere vielfältigen Angebote von Kunst und Kultur, Musik und Bildung dienen der persönlichen Weiterentwicklung jedes Einzelnen.</p>
+          <p>Für die Kinder und Jugendlichen gibt es besondere Aufenthaltsbereiche, in denen sie sich kreativ-spielerisch ausprobieren und austauschen können.</p>
+          <p>Letztendlich ist es aber die besondere Energie, die durch die Festivalteilnehmer in diesen Tagen kreiert wird, und die eine ganz bezaubernde und friedliche Atmosphäre erschafft – eine Art Vorausschau in eine neue, eine liebevollere Welt.</p>
+        </div>
+        <div>
+          <img :src="box2Img" alt="Was ist PAX?" class="w-full h-auto rounded-2xl object-cover" />
+        </div>
+      </div>
+    </section>
+
+  <!-- Box 2: Text links, Bild rechts — Was ist PAX? -->
+
+
+
 
     <div class="max-w-4xl mx-auto px-4 py-12 space-y-16">
 
-      <!-- Tickets -->
-      <section>
-        <h2 class="text-3xl font-bold text-pax-blue mb-6">🎟️ Festival-Tickets</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-pax-gold">
-            <h3 class="text-xl font-bold text-pax-purple mb-2">Kinder &amp; Jugendliche</h3>
-            <p class="text-gray-700 text-lg font-semibold mb-1">Unter 18 Jahren: <span class="text-green-600">kostenlos!</span></p>
-            <p class="text-gray-600 text-sm">In Begleitung Erwachsener. Kein Ticket erforderlich.</p>
-          </div>
-          <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-pax-blue">
-            <h3 class="text-xl font-bold text-pax-purple mb-2">Erwachsene</h3>
-            <p class="text-gray-700 mb-3">Pay what you want – du bestimmst selbst, was dir das Festival wert ist.</p>
-            <a
-              href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-block bg-pax-gold hover:bg-amber-500 text-white font-bold py-2 px-6 rounded-full transition-colors"
-            >
-              Ticket sichern →
-            </a>
-          </div>
-        </div>
-      </section>
+    
 
-      <!-- Festival ABC -->
+      <!-- Box 3:  Festival ABC -->
       <section>
         <h2 class="text-3xl font-bold text-pax-blue mb-6">📖 Festival-ABC</h2>
         <div class="space-y-3">
@@ -53,11 +78,133 @@
         </div>
       </section>
 
+      <!-- Box 4: Orte des Festivals -->
     </div>
+
+    <section class="bg-[#f5ede0] py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#342268] text-center mb-12">Orte des Festivals</h2>
+        <div class="grid md:grid-cols-3 gap-x-8 gap-y-10">
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Bühnen</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">2026 wird es eine Überraschung geben! Wir bringen nicht nur grandiose Musiker auf DIE Bühne, sondern dieses Jahr auf mehrere Bühnen.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Vortragszelt</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Wie gewohnt gibt es hier ein buntes Spektrum interessanter Vorträge und Diskussionen von Politik und Zeitgeschehen bis zu alternativen Zukunftslösungen. Lerne Referenten kennen, die Du sonst nur bei YouTube siehst und komme mit ihnen ins Gespräch.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Diplomatenzelt</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">In diesem Jahr haben wir neben dem Vortragszelt noch ein zweites Zelt mit Diskussionsrunden und Vorträgen, die sich explizit mit der Verständigung zwischen den Völkern befassen. Wir sind dankbar, das wir auch hier einige namhafte Referenten gewinnen konnten.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Aussteller</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Auch dieses Jahr haben wir wieder fantastische Aussteller auf unserem Markt der Möglichkeiten.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Kinder (T)raum</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Hier steht das Wohl der Kinder im Mittelpunkt: laufen, springen, rutschen, schwingen, bälleschlagend, jonglierend und Türme bauend können sie eine Auszeit vom „langweiligen Erwachsenenkram" genießen.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Jugendcamp</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Frieden bewegt uns alle, egal wie alt wir sind, woher wir kommen und woran wir glauben. Darum möchten wir ein Raum sein, in dem sich möglichst viele Menschen wohlfühlen, in dem sich junge Leute neu entdecken, frei entfalten und neue Erfahrungen machen können.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Workshopzelt</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Ob du zur Ruhe kommen, dich bewegen oder inspirierende Impulse mitnehmen möchtest – für jeden ist etwas dabei. Gemeinsam schaffen wir einen Raum für Austausch, Wachstum und neue Ideen.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Healing-Oase</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Komm zur Healing Oase mit Chill-Bereich, Massage Angeboten und verschiedenen Workshops wie Breathwork, Ecstatic Dance, Rapé Zeremonie, Cannabis Zeremonie, Yoga u.v.m. und tanke auf für Körper, Geist und Seele.</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-[#662D91] mb-3">Goldenes Dreieck</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Elektronische Tanzmusik mit Live-DJs und aus der Dose. Ein kleiner, feiner Floor am Ende des Zeltplatzes für alle, die sich mal richtig ausstanzen wollen.</p>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+          <RouterLink
+            to="/programm"
+            class="inline-block bg-pax-gold hover:bg-amber-500 text-white font-bold py-3 px-8 rounded-full transition-colors"
+          >
+            Zum Programm
+          </RouterLink>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-4 py-12 space-y-16">
+
+      <!--  Box 5: Tickets -->
+      <section>
+        <h2 class="text-3xl font-bold text-[#342268] text-center mb-10">Festival-Tickets</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+
+          <!-- Kinder frei -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-pax-gold leading-snug">Für Kinder und Jugendliche ist der Eintritt frei!</h3>
+            <img :src="box3Img" alt="Kind mit Schmetterlingsflügeln" class="w-full h-64 object-cover rounded-2xl" />
+            <p class="font-semibold text-gray-800">Frieden wünschen wir uns alle.<br />Frieden betrifft uns alle.<br />Aus diesem Grund möchten wir allen Menschen die Teilnahme am PAX Weltfriedensfestival ermöglichen.</p>
+            <p class="text-gray-700 text-sm leading-relaxed">Vor allem Familien bekommen dieses Jahr ein großes Geschenk und eine besondere Einladung von uns: <strong>Zum ersten Mal benötigen Kinder und Jugendliche unter 18 Jahren in Begleitung eines Erwachsenen kein Ticket.</strong></p>
+            <p class="text-gray-700 text-sm leading-relaxed">Sie kommen kostenlos auf das Festival. Sie sind uns von Herzen willkommen. Denn wofür veranstalten wir letztendlich unser Festival? Weswegen machen wir uns wieder und wieder für den Frieden stark, wenn nicht für unsere Kinder? Sie stehen für unsere Zukunft, sie sind unsere Zukunft.</p>
+          </div>
+
+          <!-- Pay what you want -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-pax-gold leading-snug">Du entscheidest selbst, wie viel du geben möchtest!</h3>
+            <img :src="box4Img" alt="Frieden für alle" class="w-full h-64 object-cover rounded-2xl" />
+            <p class="font-semibold text-gray-800 leading-snug">Auch für alle anderen, nämlich die Erwachsenen, haben wir Neuerungen. Es gibt nur ein individuelles Ticket – und du kannst selbst den Preis bestimmen.</p>
+            <p class="text-gray-700 text-sm leading-relaxed">Du darfst entscheiden, wie viel dir eine Woche PAX wert ist. Du bezahlst, was du bezahlen kannst und was du bezahlen willst. Nach oben hin gibt es (fast) keine Grenzen 🙂</p>
+            <p class="text-gray-700 text-sm leading-relaxed">Wir legen dir hiermit ein Instrument der Selbstbestimmung in die Hände. Bitte gehe sorgsam damit um. <strong>Wir möchten, dass alle Menschen, die das PAX besuchen wollen, auch kommen können, egal, wie groß oder klein ihr Geldbeutel ist.</strong></p>
+            <a
+              href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-pax-gold hover:bg-amber-500 text-white font-bold py-3 px-8 rounded-full transition-colors"
+            >
+              Ticket sichern →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Box 6: CTA — Feier mit uns den Frieden -->
+    <SectionPhotoHero
+      :imgSrc="crowdImg"
+      height-class="min-h-[45vh]"
+      overlay="bg-gradient-to-b from-black/60 via-pax-blue/50 to-black/70"
+      headline="Feier mit uns den Frieden"
+      subline='und hole dir dein Ticket jetzt direkt bei "Krasser Guru":'
+      btn-text="Jetzt Ticket sichern"
+      btn-href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
+    />
+
   </div>
 </template>
 
 <script setup>
+import SectionPhotoHero from '@/components/SectionPhotoHero.vue'
+import crowdImg from '@/assets/images/image1.png'
+import heroImg from '@/assets/images/info-hero.png'
+import box1Img from '@/assets/images/info-box-1.png'
+import box2Img from '@/assets/images/info-box-2.png'
+import box3Img from '@/assets/images/info-box-3.png'
+import box4Img from '@/assets/images/info-box-4.png'
+
 const abc = [
   {
     buchstabe: 'A',

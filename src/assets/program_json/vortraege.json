@@ -1,0 +1,35 @@
+{
+  "festival": "PAX Weltfriedensfestival 2026",
+  "source": "https://pax.family/vortraege/",
+  "last_updated": "2026-04",
+  "talks": [
+    {
+      "id": 1,
+      "speaker": "Prof. Dr. Ulrike Guérot",
+      "title": "Über die Europäische Republik",
+      "tagline": "Neue Perspektiven für Demokratie und politische Organisation in Europa",
+      "bio": "Politikwissenschaftlerin, Publizistin und Bestsellerautorin. Gründerin des European Democracy Lab.",
+      "description": "Vortrag + Teilnahme an der Panel-Diskussion „Warum Europa eine Republik werden muss“.",
+      "day": "Samstag",
+      "topic": "Europa",
+      "image_url": "",
+      "website": "https://www.ulrike-guerot.de",
+      "social": {}
+    },
+    {
+      "id": 2,
+      "speaker": "Dr. Stefan Lanka",
+      "title": "",
+      "tagline": "",
+      "bio": "Meeres- und Molekularbiologe, bekannt für seine kritische Auseinandersetzung mit der Virologie.",
+      "description": "Thema: Gesundheit, Viren und die Grundlagen der modernen Medizin.",
+      "day": "Info folgt",
+      "topic": "Gesundheit / Viren",
+      "image_url": "",
+      "website": "",
+      "social": {
+        "telegram": "https://t.me/LankaVision"
+      }
+    }
+  ]
+}

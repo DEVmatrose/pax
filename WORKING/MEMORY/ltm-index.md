@@ -53,3 +53,28 @@ _Max 100 entries. Current: 2. Warning at 90._
 - Texte/HTML aus altem index.html in Komponenten füllen
 - Neue JSON-Daten (Künstler etc.) befüllen
 - Legal-Pages auf Vite-Layout
+
+---
+
+## Session 4+5 — Content Migration & Page-Redesigns (2026-04-08)
+**Agent:** GitHub Copilot (Claude Sonnet 4.6)
+**Workpaper:** `WORKING/WORKPAPER/2026-04-07-Copilot-content-migration.md`
+
+**Entscheidungen:**
+- Multi-HTML entfernt → nur `index.html` als Vite-Einstiegspunkt (Single SPA)
+- Legal-Pages als Vue-Routen (nicht eigene HTML-Dateien): /datenschutz, /impressum, /presse
+- Hero-Images per Vite-Import (nicht public/), alle Bilder in `src/assets/images/`
+- Leaflet-Icons in Vite: `delete L.Icon.Default.prototype._getIconUrl` + `mergeOptions`
+
+**Views jetzt vollständig:**
+- HomeView: 9 Bereiche inkl. Leaflet-Karte, Bereich 6 Figma-Design
+- InfoView: Hero + Campwoche + Was ist PAX? + ABC + Orte (3x3) + Tickets + CTA
+- KontaktView: Hero (kontakt-hero.png) + Intro-Banner (purple) + Kontaktformular
+- MitmachenView: Hero (mitmach-hero.png) + Ticket-Section + Spenden-Section + Bewerbungsformular
+- DatenschutzView, ImpressumView, PresseView: Fertig aus alten HTML-Seiten migriert
+
+**Programm-Tabs (unverändert, noch ausstehend):**
+- 4 Tabs fertig: MusikerTab, VortraegeTab, WorkshopsTab, AusstellerTab
+- JSON-Daten: alle 4 Dateien haben Echtdaten
+- Fehlend: HealingoaseTab, KinderTab
+- Design-Anpassung an PAX-Stil ausstehend

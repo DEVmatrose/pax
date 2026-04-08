@@ -94,12 +94,79 @@ Seiten stück für stück abarbeiten.
 | Zeltplatz P4 | 52.737346901186726 | 12.594907183709047 |
 | Bahnhof Friesack | 52.76055737215376 | 12.587761778138088 |
 
+## Session 4 — Statische HTML-Seiten, InfoView-Redesign (2026-04-08)
+
+### Erledigte Aufgaben
+- **datenschutz.html, impressum.html, presse.html, rueckgabe.html** → gelöscht
+- **vite.config.js** — Multi-HTML-Inputs entfernt, nur noch `index.html` als Entry Point
+- **DatenschutzView.vue** — neu erstellt (8 Abschnitte von pax.family/datenschutz)
+- **ImpressumView.vue** — neu erstellt (§5 TMG, Haftung, Urheberrecht, Streitbeilegung)
+- **PresseView.vue** — neu erstellt (Pressekontakt, Festivaldaten, Social, Akkreditierung)
+- **Router** → `/datenschutz`, `/impressum`, `/presse` registriert
+- Footer-Links funktionieren korrekt via `RouterLink`
+
+### InfoView.vue — Redesign (In Arbeit)
+- Hero: `info-hero.png`, Headline-Overlay "Eine Festival-Woche in Fülle und Frieden"
+- Box 1: Bild links (`info-box-1.png`) + Text rechts — Campwoche-Infos
+- Box 2: Text links — "Was ist das PAX?" + Bild rechts (`info-box-2.png`)
+- Bilder: `rounded-2xl` (leicht abgerundete Ecken)
+- Hintergrund: `#f5ede0` (Beige)
+- Rest (Festival-ABC, Orte, Tickets) folgt danach
+
+### Build-Status
+- ✅ `npm run build` — Exit 0
+
+---
+
+## Session 5 — InfoView Abschluss + KontaktView + MitmachenView (2026-04-08)
+
+### InfoView.vue — Abschluss
+- Box 4: **Orte des Festivals** — 9 Orte als 3×3-Grid (`#f5ede0` Hintergrund), Titel in PAX-Purple, "Zum Programm" Button zentriert unten
+- Box 5: **Festival-Tickets** — 2-spaltig: links Kinder (frei, `info-box-3.png`), rechts Erwachsene Pay-what-you-want (`info-box-4.png`), jeweils Titel in Gold
+- Box 6: **CTA-Banner** — gleicher `SectionPhotoHero` wie HomeView (`image1.png`), "Feier mit uns den Frieden"
+- Alle 5 Bilder (`info-box-1` bis `info-box-4` + `info-hero`) importiert
+- `SectionPhotoHero` + `crowdImg` importiert
+
+### KontaktView.vue — Fixes
+- `heroImg` → `kontakt-hero.png` (vorher `image1.png`)
+- Fehlende `</div></template>` Closing-Tags ergänzt (strukturelles Bug-Fix)
+
+### MitmachenView.vue — Redesign
+Vorher: Hero + Intro-Text + Formular (3 Sektionen)
+Jetzt: 4 Sektionen:
+1. **Hero** — `mitmach-hero.png`, Headline "Was wäre das PAX ohne dich?"
+2. **Section Ticket** — "Sei beim PAX dabei…" — Text links (fett/`#342268`) + `info-box-3.png` rechts (rounded) + "Ticket kaufen" Button zentriert → Krasser Guru
+3. **Section Spende** — "Unterstütze das PAX mit Deiner Spende!" — Text links (#PAX-Dorf, Ehrenamt, info@pax.family) + `info-box-1.png` rechts + "Jetzt spenden" Button
+4. **Section Formular** — "Möchtest du unser Festival aktiv mitgestalten?" — Intro (3 Absätze) + Formular (Vorname, Nachname, E-Mail, Betreff, Bereich-Dropdown, Nachricht, PDF-Anhang, DSGVO, Abschicken)
+
 ### Build-Status
 - ✅ `npm run build` — Exit 0 nach allen Änderungen dieser Session
 
 ---
 
-## Offene Punkte — Meeting mit Designer
-- [ ] **"Was gefällt dir am PAX?" (Bereich 5)** — 6–8 handgeschriebene Testimonial-Bilder
-  Aktuell: Einzelbild `was-gefaellt-dir-am-pax.png`. Sobald neue Bilder da: Karussell reaktivieren.
-- [ ] **Bereich 6 Bild** — `heroImg` ist Platzhalter. Echtes Ticket/Festivalfoto einbinden (Figma referenziert `A7300364.png`)
+## Programm-Tabs — Bestandsaufnahme (Stand: 2026-04-08)
+
+### Architektur
+- `ProgrammView.vue` — Übersichts-Grid mit 6 RouterLinks zu Sub-Routen
+- Sub-Routen: `/programm/musik`, `/programm/vortraege`, `/programm/workshops`, `/programm/healingoase`, `/programm/aussteller`, `/programm/kinder`
+- 4 Tab-Komponenten in `src/components/tabs/`:
+
+| Tab | Datei | Datenquelle | Besonderheit |
+|-----|-------|-------------|--------------|
+| Musik | `MusikerTab.vue` | `/data/musiker.json` | Filtert nach `activeDay` Prop |
+| Vorträge | `VortraegeTab.vue` | `/data/vortraege.json` | Filtert nach `activeDay` Prop |
+| Workshops | `WorkshopsTab.vue` | `/data/workshops.json` | Filtert nach `activeDay` Prop |
+| Aussteller | `AusstellerTab.vue` | `/data/aussteller.json` | Kein Tag-Filter |
+
+### Datenstatus
+- `public/data/musiker.json` — ✅ Echte Daten vorhanden (z. B. "Arne Schmitt")
+- `public/data/aussteller.json` — ✅ Echte Daten (z. B. "Der Herzenmacher — Bodo")
+- `public/data/vortraege.json` — ✅ Echte Daten (z. B. "Prof. Dr. Ulrike Guérot")
+- `public/data/workshops.json` — ✅ Echte Daten (z. B. "Yoga für Anfänger")
+
+### Offene Punkte Programm-Tabs
+- [ ] Bewerbungs-Email in allen Tabs: `bewerbung@pax-festival.de` → prüfen ob korrekte Adresse
+- [ ] Healingoase-Tab fehlt noch komplett (keine Komponente, keine Daten)
+- [ ] Kinder-Tab fehlt noch komplett
+- [ ] Design der Karten an PAX-Stil anpassen (aktuell DaisyUI Defaults)
+- [ ] Tagesfilter-Leiste im Programm-View prüfen (wird `activeDay` korrekt weitergereicht?)

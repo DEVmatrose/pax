@@ -1,0 +1,27 @@
+{
+  "festival": "PAX Weltfriedensfestival 2026",
+  "source": "https://pax.family/aussteller/",
+  "last_updated": "2026-04",
+  "exhibitors": [
+    {
+      "id": 1,
+      "name": "Der Herzenmacher",
+      "person": "Bodo",
+      "description": "Handgefertigte Unikate aus Holz – jedes Herz trägt eine individuelle Schwingung und Kraft des Baumes in sich.",
+      "category": "Herzensschmuck / Kunsthandwerk",
+      "image_url": "",
+      "website": "https://www.derherzenmacher.de/",
+      "social": {}
+    },
+    {
+      "id": 2,
+      "name": "Human Design mit Marja",
+      "person": "Marja",
+      "description": "Körperbasierte Human Design Readings und intuitive Healingsessions mit Tönen und Berührung.",
+      "category": "Human Design / Healing",
+      "image_url": "",
+      "website": "https://www.fuehl-dein-human-design.de",
+      "social": {}
+    }
+  ]
+}
