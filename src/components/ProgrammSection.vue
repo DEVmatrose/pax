@@ -13,7 +13,7 @@ const error = ref(null)
 
 onMounted(async () => {
   try {
-    const res = await fetch(`/data/${props.jsonFile}.json`)
+    const res = await fetch(`${import.meta.env.BASE_URL}data/${props.jsonFile}.json`)
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     items.value = await res.json()
   } catch (e) {
