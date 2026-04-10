@@ -67,7 +67,7 @@ const programItems = [
     <!-- Programm-Unterzeile -->
     <nav v-if="$route.path.startsWith('/programm')"
       class="border-t border-[#e0d4c4] bg-[#ede4d6]">
-      <div class="max-w-[1200px] mx-auto px-6 h-10 flex items-center gap-6 text-sm font-medium text-pax-blue">
+      <div class="max-w-[1200px] mx-auto px-6 h-10 flex items-center justify-center gap-6 text-sm font-medium text-pax-blue">
         <RouterLink
           v-for="item in programItems"
           :key="item.to"

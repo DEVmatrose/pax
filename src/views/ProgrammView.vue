@@ -22,7 +22,6 @@ const bereiche = {
   musik:      { label: 'Musik',     icon: '🎵', badge: 'badge-info' },
   vortraege:  { label: 'Vortrag',   icon: '🎤', badge: 'badge-accent' },
   workshops:  { label: 'Workshop',  icon: '🛠',  badge: 'badge-warning' },
-  aussteller: { label: 'Aussteller',icon: '🏪', badge: 'badge-secondary' },
 }
 
 /* ── Tag-Erkennung ── */
@@ -46,8 +45,8 @@ async function fetchJson(name) {
 }
 
 onMounted(async () => {
-  const [musiker, vortraege, workshops, aussteller] = await Promise.all([
-    fetchJson('musiker'), fetchJson('vortraege'), fetchJson('workshops'), fetchJson('aussteller'),
+  const [musiker, vortraege, workshops] = await Promise.all([
+    fetchJson('musiker'), fetchJson('vortraege'), fetchJson('workshops'),
   ])
 
   const entries = []
@@ -100,20 +99,6 @@ onMounted(async () => {
         link: '/programm/workshops',
       })
     }
-  }
-
-  // Aussteller → kein Tag (tageübergreifend)
-  for (const a of aussteller) {
-    entries.push({
-      id: `aussteller-${a.id}`,
-      name: a.name,
-      subtitle: a.kategorie || '',
-      bereich: 'aussteller',
-      tag: null,
-      zeit: null,
-      ort: null,
-      link: '/programm/aussteller',
-    })
   }
 
   allEntries.value = entries
@@ -171,7 +156,6 @@ const sortedEntries = computed(() => {
             <option value="musik">🎵 Musik</option>
             <option value="vortraege">🎤 Vorträge</option>
             <option value="workshops">🛠 Workshops</option>
-            <option value="aussteller">🏪 Aussteller</option>
           </select>
 
           <!-- Ansichts-Toggle -->

@@ -1,3 +1,7 @@
+<script setup>
+const baseUrl = import.meta.env.BASE_URL
+</script>
+
 <template>
   <div class="min-h-screen bg-[#f5ede0]">
 
@@ -19,7 +23,9 @@
       </section>
 
       <!-- Kinder(T)Raum -->
-      <section class="bg-white rounded-2xl shadow p-8">
+      <section class="bg-white rounded-2xl shadow overflow-hidden">
+        <img :src="baseUrl + 'images/kinder/kindertraum.jpg'" alt="Kinder(T)Raum" class="w-full h-56 object-cover object-top" />
+        <div class="p-8">
         <h2 class="text-2xl font-bold text-pax-blue mb-4">🎪 Kinder(T)Raum</h2>
         <p class="text-gray-700 leading-relaxed mb-4">
           Hier steht das Wohl der Kinder im Mittelpunkt. Mit verschiedenen Materialien und Aufbauten
