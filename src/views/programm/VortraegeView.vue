@@ -7,6 +7,7 @@ import { ref } from 'vue'
 const days = ['Alle Tage', 'Do 23.', 'Fr 24.', 'Sa 25.', 'So 26.']
 const activeDay = ref('Alle Tage')
 const dayMap = { 'Do 23.': 'Donnerstag', 'Fr 24.': 'Freitag', 'Sa 25.': 'Samstag', 'So 26.': 'Sonntag' }
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -51,7 +52,7 @@ const dayMap = { 'Do 23.': 'Donnerstag', 'Fr 24.': 'Freitag', 'Sa 25.': 'Samstag
             <div v-if="activeDay === 'Alle Tage' || v.tag === dayMap[activeDay]"
               class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
               <figure v-if="v.image">
-                <img :src="'/' + v.image" :alt="v.name" class="w-full h-48 object-cover" />
+                <img :src="baseUrl + v.image" :alt="v.name" class="w-full h-64 object-cover object-top" />
               </figure>
               <div class="card-body">
                 <h3 class="card-title text-pax-blue">{{ v.name }}</h3>

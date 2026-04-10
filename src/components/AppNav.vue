@@ -1,9 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-
-const programDropdownOpen = ref(false)
-
 const programItems = [
+  { label: 'Übersicht',       to: '/programm' },
   { label: 'Musik',           to: '/programm/musik' },
   { label: 'Vorträge',        to: '/programm/vortraege' },
   { label: 'Workshops',       to: '/programm/workshops' },
@@ -17,7 +14,8 @@ const programItems = [
   <!-- Orange top accent line -->
   <div class="h-1 bg-pax-gold w-full" />
 
-  <header class="bg-[#f5ede0] border-b border-[#e8ddd0] sticky top-0 z-50 shadow-sm">
+  <header class="bg-[#f5ede0] border-b border-[#e0d4c4] sticky top-0 z-50 shadow-sm">
+    <!-- Hauptzeile -->
     <nav class="max-w-[1200px] mx-auto px-6 h-16 flex items-center gap-8">
 
       <!-- Logo -->
@@ -40,35 +38,11 @@ const programItems = [
           Info
         </RouterLink>
 
-        <!-- Programm Dropdown -->
-        <div class="relative"
-          @mouseenter="programDropdownOpen = true"
-          @mouseleave="programDropdownOpen = false">
-
-          <RouterLink to="/programm"
-            class="hover:text-pax-gold transition-colors flex items-center gap-1"
-            :class="{ 'text-pax-gold underline underline-offset-4 decoration-pax-gold': $route.path.startsWith('/programm') }">
-            Programm
-            <svg class="w-3 h-3 mt-0.5 opacity-60" fill="none" viewBox="0 0 10 6">
-              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </RouterLink>
-
-          <!-- Dropdown panel — sub-items in smaller text below -->
-          <Transition name="fade-down">
-            <div v-if="programDropdownOpen"
-              class="absolute top-full left-0 mt-1 bg-[#f5ede0] border border-[#e0d4c4] rounded-xl shadow-lg py-2 min-w-[170px]">
-              <RouterLink
-                v-for="item in programItems"
-                :key="item.to"
-                :to="item.to"
-                class="block px-5 py-2 text-sm text-pax-blue hover:bg-pax-gold/10 hover:text-pax-gold transition-colors"
-                :class="{ 'text-pax-gold font-bold': $route.path === item.to }">
-                {{ item.label }}
-              </RouterLink>
-            </div>
-          </Transition>
-        </div>
+        <RouterLink to="/programm"
+          class="hover:text-pax-gold transition-colors"
+          :class="{ 'text-pax-gold font-bold': $route.path.startsWith('/programm') }">
+          Programm
+        </RouterLink>
 
         <RouterLink to="/kontakt"
           class="hover:text-pax-gold transition-colors"
@@ -89,17 +63,21 @@ const programItems = [
       </span>
 
     </nav>
+
+    <!-- Programm-Unterzeile -->
+    <nav v-if="$route.path.startsWith('/programm')"
+      class="border-t border-[#e0d4c4] bg-[#ede4d6]">
+      <div class="max-w-[1200px] mx-auto px-6 h-10 flex items-center gap-6 text-sm font-medium text-pax-blue">
+        <RouterLink
+          v-for="item in programItems"
+          :key="item.to"
+          :to="item.to"
+          class="hover:text-pax-gold transition-colors whitespace-nowrap"
+          :class="{ 'text-pax-gold font-bold underline underline-offset-4 decoration-pax-gold': $route.path === item.to }">
+          {{ item.label }}
+        </RouterLink>
+      </div>
+    </nav>
   </header>
 </template>
 
-<style scoped>
-.fade-down-enter-active,
-.fade-down-leave-active {
-  transition: opacity 0.15s ease, transform 0.15s ease;
-}
-.fade-down-enter-from,
-.fade-down-leave-to {
-  opacity: 0;
-  transform: translateY(-4px);
-}
-</style>

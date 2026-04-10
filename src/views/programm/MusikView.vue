@@ -6,6 +6,7 @@ import { ref } from 'vue'
 
 const days = ['Alle Tage', 'Do 23.', 'Fr 24.', 'Sa 25.', 'So 26.']
 const activeDay = ref('Alle Tage')
+const baseUrl = import.meta.env.BASE_URL
 
 const dayMap = { 'Do 23.': 'Donnerstag', 'Fr 24.': 'Freitag', 'Sa 25.': 'Samstag', 'So 26.': 'Sonntag' }
 
@@ -63,7 +64,7 @@ function inDay(tage) {
             <div v-if="inDay(m.tage)"
               class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
               <figure v-if="m.image">
-                <img :src="'/' + m.image" :alt="m.name" class="w-full h-48 object-cover" />
+                <img :src="baseUrl + m.image" :alt="m.name" class="w-full h-64 object-cover object-top" />
               </figure>
               <div class="card-body">
                 <h3 class="card-title text-pax-blue">{{ m.name }}</h3>

@@ -2,16 +2,6 @@
 import { RouterLink } from 'vue-router'
 import { ref, computed, onMounted } from 'vue'
 
-/* ── Bereich-Kacheln ── */
-const sections = [
-  { label: 'Musik',           to: '/programm/musik',       icon: '🎵', color: 'bg-pax-blue' },
-  { label: 'Vorträge',        to: '/programm/vortraege',   icon: '🎤', color: 'bg-teal-600' },
-  { label: 'Workshops',       to: '/programm/workshops',   icon: '🛠', color: 'bg-pax-gold' },
-  { label: 'Healingoase',     to: '/programm/healingoase', icon: '🌿', color: 'bg-green-600' },
-  { label: 'Aussteller',      to: '/programm/aussteller',  icon: '🏪', color: 'bg-pax-purple' },
-  { label: 'Kinder & Jugend', to: '/programm/kinder',      icon: '🧒', color: 'bg-orange-500' },
-]
-
 /* ── Tagesfilter ── */
 const days = [
   { label: 'Alle Tage', key: 'alle' },
@@ -25,6 +15,7 @@ const viewMode = ref('list')     // 'list' | 'grid'
 const loading = ref(true)
 const allEntries = ref([])
 const activeBereich = ref('alle')
+const baseUrl = import.meta.env.BASE_URL
 
 /* ── Bereich-Metadaten ── */
 const bereiche = {
@@ -69,6 +60,7 @@ onMounted(async () => {
         id: `musik-${m.id}-${t}`,
         name: m.name,
         subtitle: m.subtitle || m.genre || '',
+        image: m.image || null,
         bereich: 'musik',
         tag: extractDay(t),
         zeit: null,
@@ -84,6 +76,7 @@ onMounted(async () => {
       id: `vortrag-${v.id}`,
       name: v.name,
       subtitle: v.thema || '',
+      image: v.image || null,
       bereich: 'vortraege',
       tag: extractDay(v.tag),
       zeit: null,
@@ -154,20 +147,6 @@ const sortedEntries = computed(() => {
       <h1 class="text-4xl md:text-5xl font-bold mb-3">Programmübersicht</h1>
       <p class="text-lg opacity-90">PAX Weltfriedensfestival · 23.–26. Juli 2026</p>
     </div>
-
-    <!-- Bereich-Kacheln -->
-    <section class="max-w-5xl mx-auto px-4 pt-12 pb-6">
-      <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-        <RouterLink
-          v-for="s in sections"
-          :key="s.to"
-          :to="s.to"
-          class="card bg-base-100 shadow hover:shadow-lg transition-shadow p-4 text-center">
-          <div class="text-2xl mb-1">{{ s.icon }}</div>
-          <div class="text-xs font-bold text-pax-blue">{{ s.label }}</div>
-        </RouterLink>
-      </div>
-    </section>
 
     <!-- Programmplan -->
     <section class="max-w-5xl mx-auto px-4 py-8">
@@ -248,6 +227,9 @@ const sortedEntries = computed(() => {
           v-for="e in sortedEntries" :key="e.id"
           :to="e.link"
           class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
+          <figure v-if="e.image">
+            <img :src="baseUrl + e.image" :alt="e.name" class="w-full h-48 object-cover object-top" />
+          </figure>
           <div class="card-body p-5">
             <div class="flex items-start justify-between gap-2">
               <h3 class="card-title text-base text-pax-blue">
