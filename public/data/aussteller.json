@@ -2,51 +2,61 @@
   {
     "id": 1,
     "name": "Der Herzenmacher",
-    "beschreibung": "Ich bin Bodo, der Herzenmacher. Ich möchte die Welt mit jedem Herz, das ich kreiere, ein bisschen lichtvoller und liebevoller machen. Jedes meiner Herzen trägt meine Liebe in sich und wird mit sehr viel Achtsamkeit, Freude und Liebe kreiert – aus Holz, das auf magische Weise zu mir kam.",
+    "beschreibung": "Ich bin Bodo, der Herzenmacher. Ich möchte die Welt mit jedem Herz, das ich kreiere, ein bisschen lichtvoller und liebevoller machen. Jedes meiner Herzen hat eine individuelle Schwingung und Kraft – ein Unikat, gefertigt aus Holz, das auf magische Weise zu mir kam. Jedes Holzherz trägt die Kraft und Schwingung des Baumes in sich und wird mit viel Achtsamkeit, Freude und Liebe kreiert.",
     "kategorie": "Herzensschmuck",
     "kontakt": "Bodo",
-    "website": "https://www.derherzenmacher.de/"
+    "website": "https://www.derherzenmacher.de/",
+    "image": "images/aussteller/der-herzenmacher.jpg"
   },
   {
     "id": 2,
     "name": "Human Design mit Marja",
-    "beschreibung": "Körperbasierte Human Design Readings und intuitive Healingsessions mit Tönen und Berührung. Seit meiner Nahtoderfahrung bei meiner Geburt fließt die heilende Energie durch meine Hände. Als nach Ra Uru Hu original ausgebildete Human Design Analytikerin begleite ich Menschen durch alle Stürme des Lebens zu sich selbst.",
+    "beschreibung": "Körperbasierte Human Design Readings und intuitive Healingsessions mit Tönen und Berührung. Seit meiner Nahtoderfahrung bei meiner Geburt fließt die heilende Energie durch meine Hände. Als nach Ra Uru Hu original ausgebildete Human Design Analytikerin biete ich tiefes Wissen in Kombination mit deiner eigenen Fühlerfahrung im Körper.",
     "kategorie": "Human Design",
     "kontakt": "Marja",
-    "website": "https://www.fuehl-dein-human-design.de/"
+    "website": "https://www.fuehl-dein-human-design.de",
+    "image": "images/aussteller/human-design-marja.jpg"
   },
   {
     "id": 3,
     "name": "MuNic – Das Netzkunstwerk",
-    "beschreibung": "Das Netzkunstwerk besteht aus einfachen Gemüsenetzen. Schmeißt sie nicht weg, hebt sie auf und näht sie mit an! Jeder kann mitmachen, jeder ist ein Teil des Ganzen. Ein Kunst- und Aktivismusprojekt, das zeigt, was wir gemeinsam erschaffen können.",
+    "beschreibung": "Das Netzkunstwerk besteht aus recycelten Gemüsenetzen – jeder kann mitmachen, jeder ist ein Teil des Ganzen. Das Projekt wird nicht enden, es wird immer größer. Nachhaltigkeit spielt eine zentrale Rolle; das Werk steht auch für Familienfeste und Festivals als Dekoration zur Verfügung.",
     "kategorie": "Kunst, Aktivismus, Mitmachen",
     "kontakt": "MuNic",
     "website": null,
-    "youtube": "https://www.youtube.com/channel/UCCtFztFnCs0l08kaOXz2-sA"
+    "image": "images/aussteller/munic-netzkunstwerk.jpg",
+    "social": {
+      "youtube": "https://www.youtube.com/channel/UCCtFztFnCs0l08kaOXz2-sA"
+    }
   },
   {
     "id": 4,
     "name": "Kraeuterey",
-    "beschreibung": "Die Welt der Heilkräuter und der Heil- und Vitalpilze fasziniert mich. Altes Wissen geht leider immer mehr verloren. Ich lade euch zu Kräuterwanderungen ein und zeige an meinem Stand, was man aus Kräutern herstellen kann – Salben, Tinkturen und mehr.",
+    "beschreibung": "Die Welt der Heilkräuter und Heil- und Vitalpilze hat mich immer fasziniert. Altes Wissen geht leider immer mehr verloren – darum lade ich zu Kräuterwanderungen ein und zeige am Stand, was man daraus bereiten kann. Eigene Rezepte, Salben und selbst gefertigte Produkte, entstanden in langen Winterabenden.",
     "kategorie": "Altes Wissen, Kräuterkunde",
     "kontakt": "Kräuterfee",
     "website": null,
-    "telegram": "http://t.me/Kraeuterwissen_Rezepte"
+    "image": "images/aussteller/kraeuterey.jpg",
+    "social": {
+      "telegram": "http://t.me/Kraeuterwissen_Rezepte"
+    }
   },
   {
     "id": 5,
     "name": "Seidenzauber aus Indien",
-    "beschreibung": "Viele Jahre war ich im Winter in Indien und liebte die kräftigen Farben und schönen Stoffe. Aus recycelten Saries habe ich Kleider, Röcke, Hosen und Hemden nähen lassen. Die Seide trägt sich toll auf der Haut – überwiegend mit kleinen Fehlern, zu kleinen Preisen. Neu dieses Jahr: wunderschöne bunte Männerhemden!",
+    "beschreibung": "Aus recycelten indischen Seidensaries gefertigte Kleider, Röcke, Hosen und Hemden – nachhaltig, da die Seide bereits getragen ist und weder Tieren noch Umwelt schadet. Seide trägt sich toll auf der Haut, vor allem im Sommer. Dieses Jahr neu: bunte Männerhemden.",
     "kategorie": "Nachhaltiges Design",
-    "kontakt": "Katja",
-    "website": null
+    "kontakt": "Katja (Yamuna)",
+    "website": null,
+    "image": "images/aussteller/seidenzauber-indien.jpg"
   },
   {
     "id": 6,
     "name": "Belli et Pacis",
-    "beschreibung": "BELLI et PACIS 2.0 – Daniela Wolter, Malerin, Musikerin und Autorin. In Ölbildern und Zeichnungen richte ich den Scheinwerfer auf die dunklen Seiten unserer Welt und lasse die hellen noch intensiver leuchten. Bereits zum zweiten Mal ist meine Ausstellung in Friesack zu sehen – mit neuen Werken seit 2022.",
+    "beschreibung": "Daniela Wolter – Malerin, Musikerin, Autorin. Die Ausstellung richtete den Scheinwerfer auf die dunklen Seiten der Welt und lässt die hellen noch intensiver leuchten. Bes uche den Pavillon zu einer Lesung aus dem Buch „Erzählungen aus einem neuen Jahrtausend“ oder lausche den Klängen des Musikprojektes MOA.",
     "kategorie": "Kunst",
-    "kontakt": "Daniela",
-    "website": "http://www.aliseas-artefakte.de/"
+    "kontakt": "Daniela (Elanova)",
+    "website": "http://www.Aliseas-ArteFakte.de",
+    "image": "images/aussteller/belli-et-pacis.jpg"
   }
 ]

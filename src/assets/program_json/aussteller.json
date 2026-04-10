@@ -3,25 +3,80 @@
   "source": "https://pax.family/aussteller/",
   "last_updated": "2026-04",
   "exhibitors": [
-    {
-      "id": 1,
-      "name": "Der Herzenmacher",
-      "person": "Bodo",
-      "description": "Handgefertigte Unikate aus Holz – jedes Herz trägt eine individuelle Schwingung und Kraft des Baumes in sich.",
-      "category": "Herzensschmuck / Kunsthandwerk",
-      "image_url": "",
-      "website": "https://www.derherzenmacher.de/",
-      "social": {}
+  {
+    "name": "Der Herzenmacher",
+    "kontakt": "Bodo",
+    "kategorie": "Herzensschmuck",
+    "beschreibung": "Ich bin Bodo, der Herzenmacher. Ich möchte die Welt mit JEDEM Herz, welches ich kreiere, ein bisschen LICHTVOLLER und LIEBEVOLLER machen. Jedes meiner Herzen hat eine individuelle SCHWINGUNG und KRAFT und JEDES ist ein UNIKAT, genauso wie DU! Jedes meiner Herzen trägt meine LIEBE in sich und wird mit sehr viel ACHTSAMKEIT, FREUDE UND LIEBE kreiert. Jedes meiner Herzen trägt die KRAFT UND SCHWINGUNG des BAUMES in sich, aus dem es gefertigt wurde, denn jeder BAUM hat eine INDIVIDUELLE WIRKUNG auf uns Menschenseelen und kann uns mit dieser KRAFT UND SCHWINGUNG unterstützen. Jedes HOLZ, welches ich für meine Herzen verwende, ist auf magische Weise zu mir gekommen – und erhält durch meine Hände eine neue AUFGABE und BESTIMMUNG. Ich sehe es als meine BERUFUNG an, mehr LICHT und LIEBE mit meiner Arbeit in diese Welt zu tragen.",
+    "website": "https://www.derherzenmacher.de/",
+    "social_media": {},
+    "bilder": [
+      "https://pax.family/wp-content/uploads/elementor/thumbs/35b6c732-370a-4ad2-8e4d-aa0563ba5921-riejlj166iej9c5d59sww5k5popwyt5u9yq2lbgkb4.jpg",
+      "https://pax.family/wp-content/uploads/2026/01/97b41098-f99a-4fad-a561-92bf7d1c008f-251x300.jpg"
+    ]
+  },
+  {
+    "name": "Human Design mit Marja",
+    "kontakt": "Marja",
+    "kategorie": "Human Design",
+    "beschreibung": "KÖRPERBASIERTE HUMAN DESIGN READINGS UND INTUITIVE HEALINGSESSIONS MIT TÖNEN UND BERÜHRUNG. Ich möchte Dir mit meiner Arbeit helfen, wieder ganz bei Dir in Deinem wundervollen Körper anzukommen und gleichzeitig die Spiritualität IN DIESEM KÖRPER zu nutzen. Als der Mensch, der Du wirklich bist, so wie Du eigentlich gemeint bist. Seit meiner Nahtoderfahrung bei meiner Geburt fließt die heilende Energie durch meine Hände und das Wissen der geistigen Welt durch mich als Kanal. Als nach Ra Uru Hu original ausgebildete Human Design Analytikerin biete ich Dir das tiefe Human Design Wissen in Kombination mit Deiner eigenen Fühlerfahrung im Körper an. Du findest mich im Healingspace mit: KÖRPERBASIERTEN HUMAN DESIGN READINGS und INTUITIVEN HEALINGSESSIONS MIT TÖNEN UND BERÜHRUNG.",
+    "website": "https://www.fuehl-dein-human-design.de",
+    "social_media": {},
+    "bilder": [
+      "https://pax.family/wp-content/uploads/elementor/thumbs/e716e672-1800-4f30-a0af-7fcbdc14f31c-scaled-riejlbignu48oggad6jwc7ggylqz98bzkxi6r3rpow.jpg",
+      "https://pax.family/wp-content/uploads/2026/01/0406ee1b-0b21-452c-8a05-5a4c3de4c250-169x300.jpg"
+    ]
+  },
+  {
+    "name": "MuNic - Das Netzkunstwerk",
+    "kontakt": "MuNic",
+    "kategorie": "Kunst, Aktivismus, Mitmachen",
+    "beschreibung": "Es geht um das Projekt, das Netzkunstwerk. Was ist das? Es besteht aus Netzen – einfache Gemüsenetze, die wir beim Einkauf übrig haben. Schmeißt sie nicht weg, hebt sie auf und näht sie mit an. Jeder kann mitmachen, jeder ist ein Teil des Ganzen. Der eine näht gerne, der andere nicht. Deswegen reicht es auch aus, wenn man sie einfach aufhebt und mitbringt. Dieses Projekt wird nicht enden. Das Netzkunstwerk wird immer größer. Auch das Thema Nachhaltigkeit spielt eine Rolle. Es wird für Kinderfeste, Familienfeste, Festivals und andere Ausstellungen auch zur Dekoration zur Verfügung stehen.",
+    "website": null,
+    "social_media": {
+      "youtube": "https://www.youtube.com/channel/UCCtFztFnCs0l08kaOXz2-sA"
     },
-    {
-      "id": 2,
-      "name": "Human Design mit Marja",
-      "person": "Marja",
-      "description": "Körperbasierte Human Design Readings und intuitive Healingsessions mit Tönen und Berührung.",
-      "category": "Human Design / Healing",
-      "image_url": "",
-      "website": "https://www.fuehl-dein-human-design.de",
-      "social": {}
-    }
-  ]
+    "bilder": [
+      "https://pax.family/wp-content/uploads/elementor/thumbs/MuNic_Logo-Kuenslerin-300x300-1-riffmqawy71t6r249909gnbqiuqfiial5s8hpflgi8.jpg",
+      "https://pax.family/wp-content/uploads/2026/01/MuNic_photo_2024-04-26_20-33-20-600x463-1-300x232.jpg"
+    ]
+  },
+  {
+    "name": "Kraeuterey",
+    "kontakt": "Kräuterfee",
+    "kategorie": "Altes Wissen, Kräuterkunde",
+    "beschreibung": "Die Welt der Heilkräuter und der Heil- und Vitalpilze hat mich schon immer fasziniert. Altes Wissen geht leider immer mehr verloren. Darum möchte ich euch gerne zu meinen Kräuterwanderungen einladen und an meinem Stand die Dinge zeigen, die man daraus bereiten kann. Ihr findet aber auch Dinge, die ich selbst gefertigt habe, z.B. in langen Winterabenden. Gerne verrate ich auch meine Rezepte, wie man z.B. eine Salbe herstellen kann.",
+    "website": null,
+    "social_media": {
+      "telegram": "http://t.me/Kraeuterwissen_Rezepte"
+    },
+    "bilder": [
+      "https://pax.family/wp-content/uploads/elementor/thumbs/Kraeuterey01-rkk2pwiitugm18srbyt83s5dxfqrosa81n5lq27gls.jpg"
+    ]
+  },
+  {
+    "name": "Seidenzauber aus Indien",
+    "kontakt": "Katja (Yamuna)",
+    "kategorie": "Nachhaltiges Design",
+    "beschreibung": "Viele Jahre war ich im Winter in Indien und ich liebte die kräftigen Farben und schönen Stoffe. Vor allem die leichten dünnen Seidensaries. Aus den recycelten Saries habe ich Kleider, Röcke, Hosen und Hemden nähen lassen. Die Seide trägt sich toll auf der Haut, vor allem im Sommer – und da die Seide auch schon gebraucht ist, schadet sie weder den Tieren noch der Umwelt. Ich verkaufe auf dem Festival überwiegend Kleidung mit leichten Fehlern oder zu kleinen Preisen für jeden erschwinglich. Dieses Jahr ganz neu sind auch wunderschöne, bunte Männerhemden im Angebot.",
+    "website": null,
+    "social_media": {},
+    "bilder": [
+      "https://pax.family/wp-content/uploads/elementor/thumbs/Katja_Daz02-200x267-1-rkk0k1jspvvkc1w7zb7qkfguifi83d6nc9romxng0g.jpg",
+      "https://pax.family/wp-content/uploads/2026/03/Katja_Daz01-1.jpg"
+    ]
+  },
+  {
+    "name": "Belli et Pacis",
+    "kontakt": "Daniela (Elanova)",
+    "kategorie": "Kunst",
+    "beschreibung": "BELLI et PACIS 2.0 – Daniela Wolter, Malerin, Musikerin, Autorin und vieles mehr. Bereits zum zweiten Mal wird in diesem Jahr meine Ausstellung 'Belli et Pacis' in Friesack zu sehen sein. In Ölbildern und Zeichnungen richte ich den Scheinwerfer auf die dunklen Seiten unserer Welt und lasse die hellen noch intensiver leuchten. Ihr könnt mit mir in die groteske Weltpolitik des 21. Jahrhunderts eintauchen und euch in Bildern erholen, die vom Zauber des Lebens erzählen. Seit 2022 habe ich die Ausstellung kontinuierlich erweitert. Besucht mich in meinem Pavillon zu einer Lesung aus meinem Buch 'Erzählungen aus einem neuen Jahrtausend', das zum 25. Jahrestag von 9/11 entstanden ist. Oder lauscht den Klängen meines Musikprojektes MOA.",
+    "website": "http://www.Aliseas-ArteFakte.de",
+    "social_media": {},
+    "bilder": [
+      "https://pax.family/wp-content/uploads/elementor/thumbs/bellietpacis01-rkk4a0host9t39amopyhg4eyih6k6c1e3d421p0f68.jpg",
+      "https://pax.family/wp-content/uploads/2026/03/bellietpacis02-1-300x268.jpg"
+    ]
+  }
+]
 }
