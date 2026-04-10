@@ -45,6 +45,7 @@ const baseUrl = import.meta.env.BASE_URL
             <strong>Sicherheit:</strong> Security &amp; Sanitätsdienst ca. 20 m entfernt
           </div>
         </div>
+        </div>
       </section>
 
       <!-- Tickets -->
