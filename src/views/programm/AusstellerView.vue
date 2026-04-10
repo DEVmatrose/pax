@@ -37,8 +37,10 @@ import heroImg from '@/assets/images/prog-hero-aussteller.png'
             class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
             <div class="card-body">
               <h3 class="card-title text-pax-gold">{{ a.name }}</h3>
-              <p class="text-sm text-gray-500">{{ a.kategorie }} · Stand {{ a.standnummer }}</p>
-              <p class="text-sm mt-1">{{ a.angebot }}</p>
+              <p v-if="a.kategorie" class="text-xs badge badge-outline badge-secondary mb-1">{{ a.kategorie }}</p>
+              <p class="text-sm mt-1">{{ a.beschreibung }}</p>
+              <a v-if="a.website" :href="a.website" target="_blank" rel="noopener noreferrer"
+                class="text-xs text-pax-blue underline mt-2 block truncate">{{ a.website }}</a>
             </div>
           </div>
         </div>

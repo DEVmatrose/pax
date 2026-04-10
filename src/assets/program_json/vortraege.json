@@ -5,30 +5,78 @@
   "talks": [
     {
       "id": 1,
-      "speaker": "Prof. Dr. Ulrike Guérot",
-      "title": "Über die Europäische Republik",
-      "tagline": "Neue Perspektiven für Demokratie und politische Organisation in Europa",
-      "bio": "Politikwissenschaftlerin, Publizistin und Bestsellerautorin. Gründerin des European Democracy Lab.",
-      "description": "Vortrag + Teilnahme an der Panel-Diskussion „Warum Europa eine Republik werden muss“.",
-      "day": "Samstag",
-      "topic": "Europa",
-      "image_url": "",
+      "name": "Prof. Dr. Ulrike Guérot",
+      "subtitle": "Über die Europäische Republik",
+      "bio": "Politikwissenschaftlerin, Publizistin und Bestsellerautorin. Gründerin des European Democracy Lab in Berlin. Beim PAX spricht sie über neue Perspektiven für Demokratie in Europa und nimmt an der Panel-Diskussion „Warum Europa eine Republik werden muss“ teil.",
+      "image": "images/vortraege/ulrike-guerot.jpg",
+      "tag": "Samstag",
+      "thema": "Europa",
       "website": "https://www.ulrike-guerot.de",
-      "social": {}
+      "social": {
+        "facebook": "https://www.facebook.com/UlrikeGuerotPublic",
+        "youtube": "https://www.youtube.com/@Ulrikeguérot-Official",
+        "twitter": "https://twitter.com/ulrikeguerot"
+      }
     },
     {
       "id": 2,
-      "speaker": "Dr. Stefan Lanka",
-      "title": "",
-      "tagline": "",
-      "bio": "Meeres- und Molekularbiologe, bekannt für seine kritische Auseinandersetzung mit der Virologie.",
-      "description": "Thema: Gesundheit, Viren und die Grundlagen der modernen Medizin.",
-      "day": "Info folgt",
-      "topic": "Gesundheit / Viren",
-      "image_url": "",
-      "website": "",
+      "name": "Dr. Stefan Lanka",
+      "subtitle": "Gesundheit, Viren und die Grundlagen der modernen Medizin",
+      "bio": "Meeres- und Molekularbiologe. Entdeckte 1987 das erste harmlose Virus. Zeigt auf, dass in virologischen Experimenten künstlich herbeigeführtes Zellsterben als Beweis für Viren ausgegeben wird, ohne vorgeschriebene Kontrollexperimente.",
+      "image": "images/vortraege/stefan-lanka.jpg",
+      "tag": "Info folgt noch",
+      "thema": "Gesundheit / Viren",
+      "website": null,
       "social": {
         "telegram": "https://t.me/LankaVision"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Ricardo Leppe",
+      "subtitle": "Freie Bildung für eine freie Menschheit",
+      "bio": "Bildungsevoluzzer, Vortragsredner, Lerntrainer und Berufszauberer. Hat über 50.000 Kinder gefragt, wie sie sich die Schule der Zukunft vorstellen. Hält auf dem PAX 2026 einen Vortrag und einen Workshop.",
+      "image": "images/vortraege/ricardo-leppe.jpg",
+      "tag": "Info folgt noch",
+      "thema": "Bildung",
+      "website": "https://wissenschafftfreiheit.com",
+      "social": {}
+    },
+    {
+      "id": 4,
+      "name": "Peter Müller",
+      "subtitle": "Freiheitsphilosophie und Zeitsouveränität",
+      "bio": "Kommunikations- und Unternehmensberater aus Berlin. Betreibt voluntaristen.de. Übersetzer von Büchern des Philosophen Larken Rose. Gründer des Lagerfeuer Verlags. Sein Buch „Ethik der Lebenszeit“ erscheint Sommer 2026.",
+      "image": "images/vortraege/peter-mueller.jpg",
+      "tag": "Info folgt noch",
+      "thema": "Freiheit",
+      "website": "https://voluntaristen.de",
+      "social": {}
+    },
+    {
+      "id": 5,
+      "name": "Florian Pfaff (Major a.D.)",
+      "subtitle": "Frieden und Sicherheit – Warum wir eine bessere Politik gebrauchen",
+      "bio": "Ehemaliger Major der Bundeswehr. Wurde 2003 bekannt, als er sich aus Gewissens- und völkerrechtlichen Gründen weigerte, den Irakkrieg zu unterstützen. Gilt als wichtiger Präzedenzfall für Soldatenverantwortung gegenüber Völkerrecht.",
+      "image": "images/vortraege/florian-pfaff.jpg",
+      "tag": "Freitag",
+      "thema": "Sicherheit / NATO",
+      "website": null,
+      "social": {}
+    },
+    {
+      "id": 6,
+      "name": "Flavio von Witzleben",
+      "subtitle": "Frieden finden: Erst im Innen, dann im Außen",
+      "bio": "Referent und Autor. Setzt sich mit innerer Friedensarbeit als Grundlage gesellschaftlichen Friedens auseinander. Der Schlüssel zum Frieden liegt im Inneren – das Außen ist nur eine Projektion.",
+      "image": "images/vortraege/flavio-von-witzleben.jpg",
+      "tag": "Info folgt noch",
+      "thema": "Frieden / Innere Arbeit",
+      "website": "https://flavio-von-witzleben.de",
+      "social": {
+        "facebook": "https://www.facebook.com/flavio.vonmatterhorn",
+        "instagram": "https://www.instagram.com/flaviovonwitzleben.offiziell",
+        "youtube": "https://www.youtube.com/@FlaviovonWitzleben"
       }
     }
   ]

@@ -6,6 +6,7 @@ import { ref } from 'vue'
 
 const days = ['Alle Tage', 'Do 23.', 'Fr 24.', 'Sa 25.', 'So 26.']
 const activeDay = ref('Alle Tage')
+const dayMap = { 'Do 23.': 'Donnerstag', 'Fr 24.': 'Freitag', 'Sa 25.': 'Samstag', 'So 26.': 'Sonntag' }
 </script>
 
 <template>
@@ -46,15 +47,19 @@ const activeDay = ref('Alle Tage')
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template v-for="v in items" :key="v.id ?? v.titel">
-            <div v-if="activeDay === 'Alle Tage' || v.tag?.includes(activeDay)"
+          <template v-for="v in items" :key="v.id ?? v.name">
+            <div v-if="activeDay === 'Alle Tage' || v.tag === dayMap[activeDay]"
               class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
+              <figure v-if="v.image">
+                <img :src="'/' + v.image" :alt="v.name" class="w-full h-48 object-cover" />
+              </figure>
               <div class="card-body">
-                <h3 class="card-title text-pax-blue">{{ v.titel }}</h3>
-                <p class="text-sm text-gray-500">{{ v.redner }} · {{ v.organisation }}</p>
-                <p class="text-sm mt-1">{{ v.beschreibung }}</p>
-                <div v-if="v.themen?.length" class="mt-2 flex flex-wrap gap-1">
-                  <span v-for="t in v.themen" :key="t" class="badge badge-primary badge-sm">{{ t }}</span>
+                <h3 class="card-title text-pax-blue">{{ v.name }}</h3>
+                <p v-if="v.subtitle" class="text-sm font-medium text-gray-600">{{ v.subtitle }}</p>
+                <p v-if="v.thema" class="text-xs text-gray-400">{{ v.thema }}</p>
+                <p v-if="v.bio" class="text-sm mt-1 line-clamp-4">{{ v.bio }}</p>
+                <div class="mt-2 flex flex-wrap gap-1">
+                  <span v-if="v.tag" class="badge badge-outline badge-primary badge-sm">{{ v.tag }}</span>
                 </div>
               </div>
             </div>

@@ -7,9 +7,11 @@ import { ref } from 'vue'
 const days = ['Alle Tage', 'Do 23.', 'Fr 24.', 'Sa 25.', 'So 26.']
 const activeDay = ref('Alle Tage')
 
-function inDay(auftritte) {
+const dayMap = { 'Do 23.': 'Donnerstag', 'Fr 24.': 'Freitag', 'Sa 25.': 'Samstag', 'So 26.': 'Sonntag' }
+
+function inDay(tage) {
   if (activeDay.value === 'Alle Tage') return true
-  return auftritte?.some(a => a.tag?.includes(activeDay.value))
+  return tage?.some(t => t === dayMap[activeDay.value])
 }
 </script>
 
@@ -58,15 +60,20 @@ function inDay(auftritte) {
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <template v-for="m in items" :key="m.id ?? m.name">
-            <div v-if="inDay(m.auftritte)"
+            <div v-if="inDay(m.tage)"
               class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
+              <figure v-if="m.image">
+                <img :src="'/' + m.image" :alt="m.name" class="w-full h-48 object-cover" />
+              </figure>
               <div class="card-body">
                 <h3 class="card-title text-pax-blue">{{ m.name }}</h3>
-                <p class="text-sm text-gray-500">{{ m.genre }} · {{ m.land }}</p>
-                <div v-if="m.auftritte?.length" class="mt-2 flex flex-wrap gap-1">
-                  <span v-for="a in m.auftritte" :key="a.zeit"
+                <p v-if="m.subtitle" class="text-sm text-gray-500">{{ m.subtitle }}</p>
+                <p v-if="m.genre" class="text-xs text-gray-400">{{ m.genre }}</p>
+                <p v-if="m.bio" class="text-sm mt-1 line-clamp-3">{{ m.bio }}</p>
+                <div v-if="m.tage?.length" class="mt-2 flex flex-wrap gap-1">
+                  <span v-for="tag in m.tage" :key="tag"
                     class="badge badge-outline badge-primary badge-sm">
-                    {{ a.tag }} {{ a.zeit }}
+                    {{ tag }}
                   </span>
                 </div>
               </div>
