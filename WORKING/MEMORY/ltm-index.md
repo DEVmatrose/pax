@@ -78,3 +78,27 @@ _Max 100 entries. Current: 2. Warning at 90._
 - JSON-Daten: alle 4 Dateien haben Echtdaten
 - Fehlend: HealingoaseTab, KinderTab
 - Design-Anpassung an PAX-Stil ausstehend
+
+---
+
+## Entry 006 — 2026-04-09/10 — Programm-Übersicht & Musiker-Daten
+
+**Workpaper:** `WORKING/WORKPAPER/2026-04-10-Copilot-programm-refactor.md`
+
+**Entscheidungen:**
+- `public/data/*.json` ist die Live-Datenquelle (per fetch geladen), nicht `src/assets/program_json/`
+- JSON-Fetches nutzen `import.meta.env.BASE_URL` wegen `base: '/pax/'` in vite.config.js
+- Bilder liegen lokal in `public/images/<bereich>/` mit Slug-Namen (z.B. `arne-schmitt.jpg`)
+- Bildformat: JPG bevorzugt; PNG nur wenn nötig und dann mit sharp zu JPG konvertieren
+
+**Erledigt:**
+- ProgrammView: unified Schedule mit Tagesfilter, Bereichsfilter, List/Grid-Toggle
+- `public/data/musiker.json`: 11 Künstler komplett, MEA LIEBE & Renessance nachgetragen
+- Bilder aller 11 Musiker heruntergeladen → `public/images/musiker/`
+- JSON-Syntax-Bugs (unescaped Quotes) in musiker.json und vortraege.json gefixt
+
+**Offen:**
+- Views an tatsächliche Feldnamen anpassen (MusikView, VortraegeView, AusstellerView)
+- 12. Musiker von pax.family identifizieren
+- Bilder für Aussteller/Vorträge noch ausstehend
+- HealingoaseTab, KinderTab noch ohne JSON-Daten
