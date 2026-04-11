@@ -1,26 +1,34 @@
 <script setup>
+import SectionPhotoHero from '@/components/SectionPhotoHero.vue'
+import heroImg from '@/assets/images/prog-hero-aussteller.png'
 const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
   <div class="min-h-screen bg-[#f5ede0]">
 
-    <!-- Page Header -->
-    <div class="bg-gradient-to-r from-pax-gold to-pax-purple py-16 px-4 text-center text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-3">Kinder &amp; Jugend</h1>
-      <p class="text-lg opacity-90">Spielen · Entdecken · Mitmachen</p>
-    </div>
+    <SectionPhotoHero
+      :img-src="heroImg"
+      headline="Kinder &amp; Jugendliche"
+      title-align="bottom-left"
+      bottom-color="#662D91"
+      height-class="min-h-[55vh]"
+    />
+
+    <!-- Info-Box -->
+    <section class="bg-pax-purple text-white py-12 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl font-bold leading-relaxed">
+          Wir wollen auch dieses Jahr wieder einen Raum für junge Menschen schaffen.
+          Menschen jeden Alters sollen bei uns eine Ecke finden können, in der sie sich wohl fühlen.
+        </p>
+        <p class="mt-4 leading-relaxed">
+          Wir wollen unser Angebot ausbauen – insbesondere für Jugendliche – und sind noch in der Ideen-Sammelphase.
+        </p>
+      </div>
+    </section>
 
     <div class="max-w-3xl mx-auto px-4 py-12 space-y-10">
-
-      <section class="bg-white rounded-2xl shadow p-8">
-        <h2 class="text-2xl font-bold text-pax-purple mb-4">Ein Ort für junge Menschen</h2>
-        <p class="text-gray-700 leading-relaxed">
-          Wir wollen auch dieses Jahr wieder einen Raum für junge Menschen schaffen.
-          Menschen jeden Alters sollen beim PAX eine Ecke finden können, in der sie sich wohl fühlen.
-          Wir wollen unser Angebot insbesondere für Jugendliche ausbauen und sind noch in der Ideen-Sammelphase.
-        </p>
-      </section>
 
       <!-- Kinder(T)Raum -->
       <section class="bg-white rounded-2xl shadow overflow-hidden">

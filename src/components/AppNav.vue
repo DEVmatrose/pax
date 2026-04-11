@@ -94,9 +94,21 @@ const programItems = [
         </RouterLink>
         <RouterLink to="/programm" @click="closeMenu"
           class="py-2.5 border-b border-[#e0d4c4] hover:text-pax-gold transition-colors"
-          :class="{ 'text-pax-gold': $route.path.startsWith('/programm') }">
+          :class="{ 'text-pax-gold': $route.path === '/programm' }">
           Programm
         </RouterLink>
+        <!-- Programm-Unterlinks (nur sichtbar wenn auf /programm) -->
+        <template v-if="$route.path.startsWith('/programm')">
+          <RouterLink
+            v-for="item in programItems.slice(1)"
+            :key="item.to"
+            :to="item.to"
+            @click="closeMenu"
+            class="py-2 pl-4 border-b border-[#e0d4c4] text-sm hover:text-pax-gold transition-colors"
+            :class="{ 'text-pax-gold font-semibold': $route.path === item.to }">
+            {{ item.label }}
+          </RouterLink>
+        </template>
         <RouterLink to="/kontakt" @click="closeMenu"
           class="py-2.5 border-b border-[#e0d4c4] hover:text-pax-gold transition-colors"
           :class="{ 'text-pax-gold': $route.path.startsWith('/kontakt') }">
@@ -111,9 +123,9 @@ const programItems = [
       </div>
     </div>
 
-    <!-- Programm-Unterzeile -->
+    <!-- Programm-Unterzeile (nur Desktop) -->
     <nav v-if="$route.path.startsWith('/programm')"
-      class="border-t border-[#e0d4c4] bg-[#ede4d6]">
+      class="hidden md:block border-t border-[#e0d4c4] bg-[#ede4d6]">
       <div class="overflow-x-auto" style="-webkit-overflow-scrolling: touch">
         <div class="px-6 h-10 flex items-center gap-6 text-sm font-medium text-pax-deep whitespace-nowrap
                     max-w-[1200px] mx-auto md:justify-center">

@@ -19,9 +19,9 @@ const baseUrl = import.meta.env.BASE_URL
 
 /* ── Bereich-Metadaten ── */
 const bereiche = {
-  musik:      { label: 'Musik',     icon: '🎵', badge: 'badge-info' },
-  vortraege:  { label: 'Vortrag',   icon: '🎤', badge: 'badge-accent' },
-  workshops:  { label: 'Workshop',  icon: '🛠',  badge: 'badge-warning' },
+  musik:      { label: 'Musik',    badge: 'badge-info' },
+  vortraege:  { label: 'Vortrag',  badge: 'badge-accent' },
+  workshops:  { label: 'Workshop', badge: 'badge-warning' },
 }
 
 /* ── Tag-Erkennung ── */
@@ -153,9 +153,9 @@ const sortedEntries = computed(() => {
           <!-- Bereichsfilter -->
           <select v-model="activeBereich" class="select select-sm select-bordered">
             <option value="alle">Alle Bereiche</option>
-            <option value="musik">🎵 Musik</option>
-            <option value="vortraege">🎤 Vorträge</option>
-            <option value="workshops">🛠 Workshops</option>
+            <option value="musik">Musik</option>
+            <option value="vortraege">Vorträge</option>
+            <option value="workshops">Workshops</option>
           </select>
 
           <!-- Ansichts-Toggle -->
@@ -184,8 +184,6 @@ const sortedEntries = computed(() => {
           v-for="e in sortedEntries" :key="e.id"
           :to="e.link"
           class="flex items-center gap-3 p-3 rounded-lg bg-base-100 shadow-sm hover:shadow transition-shadow group">
-          <!-- Bereich-Icon -->
-          <span class="text-xl w-8 text-center flex-shrink-0">{{ bereiche[e.bereich]?.icon }}</span>
           <!-- Infos -->
           <div class="flex-1 min-w-0">
             <div class="font-semibold text-pax-blue group-hover:underline truncate">{{ e.name }}</div>
@@ -217,7 +215,6 @@ const sortedEntries = computed(() => {
           <div class="card-body p-5">
             <div class="flex items-start justify-between gap-2">
               <h3 class="card-title text-base text-pax-blue">
-                <span class="mr-1">{{ bereiche[e.bereich]?.icon }}</span>
                 {{ e.name }}
               </h3>
               <span class="badge badge-sm flex-shrink-0" :class="bereiche[e.bereich]?.badge">

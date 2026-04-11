@@ -81,7 +81,32 @@ _Max 100 entries. Current: 2. Warning at 90._
 
 ---
 
-## Entry 006 — 2026-04-09/10 — Programm-Übersicht & Musiker-Daten
+## Entry 007 — 2026-04-11 — Design-Sprint: Corporate Design & Mobile-Nav
+
+**Agent:** GitHub Copilot (Claude Sonnet 4.6)
+**Workpaper:** `WORKING/WORKPAPER/closed/2026-04-11-copilot-navbar-mobile.md`
+
+**Entscheidungen:**
+- Primärfarbe Dunkelviolett `#342268` — in Figma festgelegt, ab jetzt Markenwert
+- `pax-blue` in Tailwind und DaisyUI `primary` = `#342268` (war `#2E3192`)
+- `pax-deep` als Alias ebenfalls = `#342268`
+- Schriftart gewechselt: `Inter` → `Gantari` (Google Fonts, alle Gewichte)
+- Oranger Akzent-Streifen oben in Navbar entfernt (war `bg-pax-gold h-1`)
+- Hamburger-Menü implementiert (breakpoint md), Desktop unverändert
+- Logo in Navbar verdoppelt (h-10 → h-20)
+- Menüpunkte `font-semibold` → `font-normal`
+- CTA-Block „Feier mit uns den Frieden" in `AppFooter.vue` oben verankert (globaler Block, kein Duplikat nötig)
+- `SectionPhotoHero.vue`: neues Prop `title-align="bottom-left"` + `bottom-color` für nahtlosen Übergang
+- Emoji-Icons aus ProgrammView und ProgrammeTabs entfernt
+- Leaflet Ukraine-Flagge per CSS ausgeblendet (Attribution bleibt erhalten)
+- Home-Map-Icons: Emoji → SVG in `pax-gold`
+
+**Status alle Programm-Hero-Bereiche:**
+- Musik, Vorträge, Workshops, Healingoase, Aussteller, Kinder: Titel unten-links, `bottom-color` passend zur Info-Box
+
+**Noch offen:**
+- Eigenes Bild für KinderView Hero (aktuell: `prog-hero-aussteller.png` als Platzhalter)
+- Bewerbungslink in AusstellerTab.vue (User hat Änderung zurückgenommen — absichtlich?)
 
 **Workpaper:** `WORKING/WORKPAPER/2026-04-10-Copilot-programm-refactor.md`
 

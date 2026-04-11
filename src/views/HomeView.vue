@@ -229,7 +229,7 @@ const programm = [
             href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-pax-blue hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors"
+            class="bg-pax-deep hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors"
           >
             Jetzt Ticket sichern
           </a>
@@ -327,19 +327,6 @@ const programm = [
 
 
   <!-- ═══════════════════════════════════════════════════════════
-       BEREICH 4 — "Feier mit uns den Frieden" (SectionPhotoHero)
-       ═══════════════════════════════════════════════════════════ -->
-  <SectionPhotoHero
-    :imgSrc="crowdImg"
-    height-class="min-h-[45vh]"
-    overlay="bg-gradient-to-b from-black/60 via-pax-blue/50 to-black/70"
-    headline="Feier mit uns den Frieden"
-    subline='und hole dir dein Ticket jetzt direkt bei "Krasser Guru":'
-    btn-text="Jetzt Ticket sichern"
-    btn-href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
-  />
-
-  <!-- ═══════════════════════════════════════════════════════════
        BEREICH 5 — "Was gefällt dir am PAX?"
        ═══════════════════════════════════════════════════════════ -->
   <section class="bg-white py-20 px-6">
@@ -423,7 +410,7 @@ const programm = [
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center">
         <div class="flex flex-col items-center gap-3">
-          <span class="text-4xl">📍</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-pax-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           <h3 class="font-extrabold text-pax-blue text-lg">Adresse</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
             Für die manuelle Eingabe in ein Navigations-Tool deiner Wahl:
@@ -431,7 +418,7 @@ const programm = [
           </p>
         </div>
         <div class="flex flex-col items-center gap-3">
-          <span class="text-4xl">🚗</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-pax-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
           <h3 class="font-extrabold text-pax-blue text-lg">Mit dem Auto</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
             Friesack liegt an der B5 (vom Brandenburger Tor immer Richtung Nord-Westen).
@@ -439,7 +426,7 @@ const programm = [
           </p>
         </div>
         <div class="flex flex-col items-center gap-3">
-          <span class="text-4xl">🚆</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-pax-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4zm0 2c3.51 0 5.5.57 5.93 1.5H6.07C6.5 4.57 8.49 4 12 4zm-5 3h4v3H7V7zm10 8.5c0 .83-.67 1.5-1.5 1.5h-7c-.83 0-1.5-.67-1.5-1.5V12h10v3.5zm0-5.5h-4V7h4v3z"/></svg>
           <h3 class="font-extrabold text-pax-blue text-lg">Mit der Bahn</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
             Ab Berlin Hauptbahnhof 45 Minuten Richtung Wittenberge bis Haltestelle
@@ -463,7 +450,7 @@ const programm = [
   <section class="bg-[#f5ede0] py-20 px-6">
     <div class="max-w-[1200px] mx-auto">
       <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-pax-blue mb-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-pax-deep mb-4">
           Melde dich zur Friedenspost an
         </h2>
         <p class="text-gray-600 leading-relaxed mb-10">
@@ -487,7 +474,7 @@ const programm = [
           </div>
           <button
             type="submit"
-            class="w-full bg-pax-blue hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors"
+            class="w-full bg-pax-deep hover:bg-blue-800 text-white font-bold py-3 rounded-lg transition-colors"
           >
             Abonnieren
           </button>
@@ -564,5 +551,9 @@ const programm = [
 }
 .pax-map-label::before {
   display: none;
+}
+/* Leaflet: Ukraine-Flagge ausblenden */
+.leaflet-attribution-flag {
+  display: none !important;
 }
 </style>

@@ -11,13 +11,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        sans: ['Gantari', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
         pax: {
-          blue:   '#2E3192',
+          blue:   '#342268',
           purple: '#662D91',
           gold:   '#F7941D',
+          gold2:  '#F99C25',
           deep:   '#342268',
         },
       },
@@ -28,7 +29,7 @@ export default {
     themes: [
       {
         pax: {
-          primary:   '#2E3192',
+          primary:   '#342268',
           secondary: '#662D91',
           accent:    '#F7941D',
           neutral:   '#1a1a2e',

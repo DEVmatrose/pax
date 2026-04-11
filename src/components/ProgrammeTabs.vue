@@ -8,9 +8,9 @@ import AusstellerTab from './tabs/AusstellerTab.vue'
 const activeTab = ref('musiker')
 
 const tabs = [
-  { key: 'musiker',    label: '🎵 Musiker' },
-  { key: 'workshops',  label: '🛠 Workshops' },
-  { key: 'vortraege',  label: '🎤 Vorträge' },
+  { key: 'musiker',    label: 'Musiker' },
+  { key: 'workshops',  label: 'Workshops' },
+  { key: 'vortraege',  label: 'Vorträge' },
   { key: 'aussteller', label: '🏪 Aussteller' },
 ]
 

@@ -29,11 +29,7 @@ onMounted(async () => {
     <h1 class="text-4xl font-extrabold text-pax-blue mb-8">{{ title }}</h1>
 
     <!-- Bewerbungs-Banner -->
-    <div v-if="bewerbungText" class="alert bg-pax-blue/10 border-pax-blue/20 text-pax-blue mb-8">
-      <span>{{ bewerbungText }}
-        <a href="mailto:bewerbung@pax-festival.de" class="link font-bold ml-1">Jetzt bewerben →</a>
-      </span>
-    </div>
+
 
     <div v-if="loading" class="flex justify-center py-20">
       <span class="loading loading-spinner loading-lg text-pax-blue" />

@@ -10,6 +10,9 @@ const baseUrl = import.meta.env.BASE_URL
     <SectionPhotoHero
       :img-src="heroImg"
       headline="Unser Ausstellerbereich"
+      title-align="bottom-left"
+      bottom-color="#e9d5ff"
+      height-class="min-h-[55vh]"
     />
 
     <!-- Info-Box -->

@@ -8,6 +8,9 @@ import heroImg from '@/assets/images/prog-hero-healing.png'
     <SectionPhotoHero
       :img-src="heroImg"
       headline="Unser Healingbereich"
+      title-align="bottom-left"
+      bottom-color="#F7941D"
+      height-class="min-h-[55vh]"
     />
 
     <!-- Info-Box -->

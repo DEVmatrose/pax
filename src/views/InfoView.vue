@@ -87,48 +87,48 @@
         <div class="grid md:grid-cols-3 gap-x-8 gap-y-10">
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Bühnen</h3>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Bühnen</h2>
             <p class="text-gray-700 text-sm leading-relaxed">2026 wird es eine Überraschung geben! Wir bringen nicht nur grandiose Musiker auf DIE Bühne, sondern dieses Jahr auf mehrere Bühnen.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Vortragszelt</h3>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Vortragszelt</h2>
             <p class="text-gray-700 text-sm leading-relaxed">Wie gewohnt gibt es hier ein buntes Spektrum interessanter Vorträge und Diskussionen von Politik und Zeitgeschehen bis zu alternativen Zukunftslösungen. Lerne Referenten kennen, die Du sonst nur bei YouTube siehst und komme mit ihnen ins Gespräch.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Diplomatenzelt</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">In diesem Jahr haben wir neben dem Vortragszelt noch ein zweites Zelt mit Diskussionsrunden und Vorträgen, die sich explizit mit der Verständigung zwischen den Völkern befassen. Wir sind dankbar, das wir auch hier einige namhafte Referenten gewinnen konnten.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Diplomatenzelt</h2>
+            <p class="text-gray-700   leading-relaxed">In diesem Jahr haben wir neben dem Vortragszelt noch ein zweites Zelt mit Diskussionsrunden und Vorträgen, die sich explizit mit der Verständigung zwischen den Völkern befassen. Wir sind dankbar, das wir auch hier einige namhafte Referenten gewinnen konnten.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Aussteller</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">Auch dieses Jahr haben wir wieder fantastische Aussteller auf unserem Markt der Möglichkeiten.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Aussteller</h2>
+            <p class="text-gray-700   leading-relaxed">Auch dieses Jahr haben wir wieder fantastische Aussteller auf unserem Markt der Möglichkeiten.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Kinder (T)raum</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">Hier steht das Wohl der Kinder im Mittelpunkt: laufen, springen, rutschen, schwingen, bälleschlagend, jonglierend und Türme bauend können sie eine Auszeit vom „langweiligen Erwachsenenkram" genießen.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Kinder (T)raum</h2>
+            <p class="text-gray-700   leading-relaxed">Hier steht das Wohl der Kinder im Mittelpunkt: laufen, springen, rutschen, schwingen, bälleschlagend, jonglierend und Türme bauend können sie eine Auszeit vom „langweiligen Erwachsenenkram" genießen.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Jugendcamp</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">Frieden bewegt uns alle, egal wie alt wir sind, woher wir kommen und woran wir glauben. Darum möchten wir ein Raum sein, in dem sich möglichst viele Menschen wohlfühlen, in dem sich junge Leute neu entdecken, frei entfalten und neue Erfahrungen machen können.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Jugendcamp</h2>
+            <p class="text-gray-700   leading-relaxed">Frieden bewegt uns alle, egal wie alt wir sind, woher wir kommen und woran wir glauben. Darum möchten wir ein Raum sein, in dem sich möglichst viele Menschen wohlfühlen, in dem sich junge Leute neu entdecken, frei entfalten und neue Erfahrungen machen können.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Workshopzelt</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">Ob du zur Ruhe kommen, dich bewegen oder inspirierende Impulse mitnehmen möchtest – für jeden ist etwas dabei. Gemeinsam schaffen wir einen Raum für Austausch, Wachstum und neue Ideen.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Workshopzelt</h2>
+            <p class="text-gray-700  leading-relaxed">Ob du zur Ruhe kommen, dich bewegen oder inspirierende Impulse mitnehmen möchtest – für jeden ist etwas dabei. Gemeinsam schaffen wir einen Raum für Austausch, Wachstum und neue Ideen.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Healing-Oase</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">Komm zur Healing Oase mit Chill-Bereich, Massage Angeboten und verschiedenen Workshops wie Breathwork, Ecstatic Dance, Rapé Zeremonie, Cannabis Zeremonie, Yoga u.v.m. und tanke auf für Körper, Geist und Seele.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Healing-Oase</h2>
+            <p class="text-gray-700   leading-relaxed">Komm zur Healing Oase mit Chill-Bereich, Massage Angeboten und verschiedenen Workshops wie Breathwork, Ecstatic Dance, Rapé Zeremonie, Cannabis Zeremonie, Yoga u.v.m. und tanke auf für Körper, Geist und Seele.</p>
           </div>
 
           <div class="text-center">
-            <h3 class="text-xl font-bold text-[#662D91] mb-3">Goldenes Dreieck</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">Elektronische Tanzmusik mit Live-DJs und aus der Dose. Ein kleiner, feiner Floor am Ende des Zeltplatzes für alle, die sich mal richtig ausstanzen wollen.</p>
+            <h2 class="text-xl font-bold text-pax-gold2 mb-3">Goldenes Dreieck</h2>
+            <p class="text-gray-700 text leading-relaxed">Elektronische Tanzmusik mit Live-DJs und aus der Dose. Ein kleiner, feiner Floor am Ende des Zeltplatzes für alle, die sich mal richtig ausstanzen wollen.</p>
           </div>
 
         </div>
@@ -182,16 +182,6 @@
 
     </div>
 
-    <!-- Box 6: CTA — Feier mit uns den Frieden -->
-    <SectionPhotoHero
-      :imgSrc="crowdImg"
-      height-class="min-h-[45vh]"
-      overlay="bg-gradient-to-b from-black/60 via-pax-blue/50 to-black/70"
-      headline="Feier mit uns den Frieden"
-      subline='und hole dir dein Ticket jetzt direkt bei "Krasser Guru":'
-      btn-text="Jetzt Ticket sichern"
-      btn-href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
-    />
 
   </div>
 </template>

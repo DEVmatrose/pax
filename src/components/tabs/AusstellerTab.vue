@@ -14,7 +14,7 @@ onMounted(async () => {
     <!-- Bewerbungs-Banner -->
     <div class="alert alert-info mb-6">
       <span>Du möchtest ausstellen?
-        <a href="mailto:bewerbung@pax-festival.de" class="link font-bold">Jetzt bewerben</a>
+        <a href="mailto:bewerbung@pax-festival.de" class="link font-bold">Jetzt bewerben →</a>
       </span>
     </div>
 

@@ -18,6 +18,9 @@ function inDay(termine) {
     <SectionPhotoHero
       :img-src="heroImg"
       headline="Unser Workshopprogramm"
+      title-align="bottom-left"
+      bottom-color="#F7941D"
+      height-class="min-h-[55vh]"
     />
 
     <!-- Info-Box -->

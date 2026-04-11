@@ -21,6 +21,9 @@ function inDay(tage) {
     <SectionPhotoHero
       :img-src="heroImg"
       headline="Unser Musikprogramm"
+      title-align="bottom-left"
+      bottom-color="#662D91"
+      height-class="min-h-[55vh]"
     />
 
     <!-- Info-Box -->
