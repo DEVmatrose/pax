@@ -32,7 +32,7 @@ onUnmounted(() => clearInterval(timer))
   <div class="flex items-center gap-3">
     <div v-for="(val, label) in { Tage: days, Std: hours, Min: mins, Sek: secs }"
       :key="label"
-      class="flex flex-col items-center bg-pax-blue text-white rounded-lg px-3 py-2 min-w-[52px]">
+      class="flex flex-col items-center bg-[#342268] text-white rounded-lg px-3 py-2 min-w-[52px]">
       <span class="text-2xl font-extrabold tabular-nums leading-none">{{ String(val).padStart(2,'0') }}</span>
       <span class="text-[10px] font-semibold opacity-70 mt-0.5">{{ label }}</span>
     </div>

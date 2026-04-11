@@ -18,6 +18,7 @@ export default {
           blue:   '#2E3192',
           purple: '#662D91',
           gold:   '#F7941D',
+          deep:   '#342268',
         },
       },
     },

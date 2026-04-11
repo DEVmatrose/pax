@@ -2,13 +2,14 @@
 import { onMounted, onBeforeUnmount } from 'vue'
 import CountdownTimer from '@/components/CountdownTimer.vue'
 import SectionPhotoHero from '@/components/SectionPhotoHero.vue'
-import heroImg from '@/assets/images/hero-girl.png'
+import heroImg from '@/assets/images/lp-image1.png'
 import logoPaxImg from '@/assets/images/logo-pax-26.png'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+import lpImage2 from '@/assets/images/lp-image2.png'
 
 // Fix Leaflet default icon paths in Vite
 delete L.Icon.Default.prototype._getIconUrl
@@ -198,8 +199,8 @@ const programm = [
       <!-- Datum + Countdown -->
       <div class="text-white">
         <h2 class="text-3xl md:text-4xl font-extrabold mb-0.5">23. – 26. Juli 2026</h2>
-        <p class="text-white/70 text-sm">Freilichtbühne Friesack bei Berlin</p>
-        <p class="text-white/50 text-xs mb-5">Campwoche 21. – 28. Juli</p>
+        <p class="text-white/90 ">Freilichtbühne Friesack bei Berlin</p>
+        <p class="text-white/90  mb-5">Campwoche 21. – 28. Juli</p>
         <CountdownTimer />
       </div>
     </div>
@@ -223,7 +224,7 @@ const programm = [
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4">
-          <span class="text-white/90 text-xl font-bold self-center">Bist du dabei?</span>
+          <span class="text-[#342268] text-xl font-bold self-center">Bist du dabei?</span>
           <a
             href="https://krasser.guru/veranstaltungen/pax-das-weltfriedensfestival-2026/"
             target="_blank"
@@ -237,7 +238,7 @@ const programm = [
 
       <!-- Foto rechts -->
       <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
-        <img :src="heroImg" alt="Festivalbesucher" class="w-full h-full object-cover" />
+        <img :src="lpImage2" alt="Festivalbesucher" class="w-full h-full object-cover" />
       </div>
     </div>
   </section>
